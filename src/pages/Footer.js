@@ -4,8 +4,6 @@ import styles from "./Footer.module.css";
 function Footer() {
   return (
     <div className={styles.footerContainer}>
-      <img src="hero-1.jpg" alt="Lady training" className={styles.image} />
-
       <div className={styles.footerGrid}>
         <div>
           <h1>Get In Touch</h1>
