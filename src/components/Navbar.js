@@ -2,18 +2,24 @@ import React from "react";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
+  const handleScrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        behavior: "smooth",
+        top: element.offsetTop,
+      });
+    }
+  };
+
   return (
     <ul className={styles.navbar}>
-      <li>Home</li>
-      <li>About Us</li>
-      <li>Courses</li>
-      <li>Schedule</li>
-      <li>Events</li>
-      <li>Testimonials</li>
-      {/* <li>Home Workouts</li>
-      <li>Credentials</li>
-      <li>Products</li>
-      <li>Contact</li> */}
+      <li className={styles.active}>Home</li>
+      <li onClick={() => handleScrollTo("courses")}>Courses</li>
+      <li onClick={() => handleScrollTo("aboutUs")}>About Us</li>
+      <li onClick={() => handleScrollTo("features")}>Features</li>
+      <li onClick={() => handleScrollTo("calendar")}>Calendar</li>
+      <li onClick={() => handleScrollTo("bmi")}>BMI</li>
     </ul>
   );
 }

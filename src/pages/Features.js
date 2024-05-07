@@ -3,7 +3,7 @@ import styles from "./Features.module.css";
 
 function Features() {
   return (
-    <div className={styles.featuresContainer}>
+    <div className={styles.featuresContainer} id="features">
       <div className={styles.feature1}>
         <div className={styles.featureicon}>
           <ion-icon name="calendar-outline"></ion-icon>

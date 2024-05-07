@@ -3,23 +3,23 @@ import styles from "./Courses.module.css";
 
 export default function Courses() {
   return (
-    <div className={styles.coursesBox}>
+    <div className={styles.coursesBox} id="courses">
       <div className={styles.courseContent}>
-        <h1>Body Building</h1>
+        <h1>Single Class</h1>
         <p>
-          Lorem justo tempor sit aliquyam invidunt, amet vero ea dolor ipsum ut
-          diam sit dolores, dolor sit eos sea sanctus erat lorem nonumy sanctus
-          takimata. Kasd amet sit sadipscing at..
+          Get to know the Classic Pilates method on the mat or deepen your
+          practice. As always, you don't have to be a professional. I look
+          forward to you. You can but don't have to turn on your camera.
         </p>
         <button>Join Now</button>
       </div>
 
       <div className={styles.courseContent}>
-        <h1>Muscle Building</h1>
+        <h1>Private Class</h1>
         <p>
-          Lorem justo tempor sit aliquyam invidunt, amet vero ea dolor ipsum ut
-          diam sit dolores, dolor sit eos sea sanctus erat lorem nonumy sanctus
-          takimata. Kasd amet sit sadipscing at..
+          Individual session tailored to your needs. To make an appointment,
+          please contact me by email at hi@pilatesbabes.com. If you have health
+          problems or are pregnant, please contact me in advance.
         </p>
         <button>Join Now</button>
       </div>

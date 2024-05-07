@@ -3,7 +3,7 @@ import styles from "./TimeTable.module.css";
 
 export default function TimeTable() {
   return (
-    <div className={styles.timeTableContainer}>
+    <div className={styles.timeTableContainer} id="calendar">
       <h3>Class Timetable</h3>
 
       <h1>Working Hours and Class Time</h1>

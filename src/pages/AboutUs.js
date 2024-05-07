@@ -3,7 +3,7 @@ import styles from "./AboutUs.module.css";
 
 function AboutUs() {
   return (
-    <div className={styles.aboutUsContainer}>
+    <div className={styles.aboutUsContainer} id="aboutUs">
       <div>
         <img src="hero-img.jpg" alt="Hello" className={styles.image} />
       </div>
