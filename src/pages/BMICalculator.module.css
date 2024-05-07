@@ -1,0 +1,101 @@
+.bmiCalculatorContainer {
+  background-color: black;
+  position: relative;
+  margin-bottom: 6.4rem;
+}
+
+.image {
+  width: 70%;
+  background-size: cover;
+  background-position: center;
+  height: 50rem;
+  display: block;
+}
+
+.bmiGrid {
+  display: grid;
+  grid-template-columns: 70fr 30fr;
+}
+
+.bmiBox {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  padding: 3.2rem;
+}
+
+.bmiBox h3 {
+  color: red;
+  margin-bottom: 1.6rem;
+  width: 50%;
+  font-size: 1.8rem;
+}
+
+.bmiBox h1 {
+  font-size: 4.4rem;
+  width: 50%;
+  margin-bottom: 1.6rem;
+  color: #fff;
+  margin-bottom: 2.4rem;
+}
+
+.bmiBox p {
+  font-size: 1.8rem;
+  width: 50%;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.calculateBmiBox {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  width: 25%;
+  padding: 3.2rem;
+}
+
+.calculateBmiBox h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1.2rem;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.inputs input {
+  padding: 1.2rem;
+  font-family: inherit;
+  background-color: #aaa;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.inputs input::placeholder {
+  color: #777;
+}
+
+.inputs select {
+  padding: 1.2rem;
+  font-family: inherit;
+  background-color: #aaa;
+  font-size: 1.8rem;
+  color: #777;
+}
+
+.inputs button {
+  grid-column: 1 / -1;
+  padding: 1.2rem;
+  font-family: inherit;
+  background-color: #aaa;
+  cursor: pointer;
+  transition: all 0.4s;
+  font-size: 1.8rem;
+}
+
+.inputs button:hover {
+  background-color: #777;
+}

@@ -1,0 +1,14 @@
+/* .logo {
+  text-decoration: none;
+  font-size: 4.4rem;
+  font-weight: bold;
+  letter-spacing: -0.1rem;
+  z-index: 1;
+  color: #fff;
+} */
+
+.logo {
+  width: 8rem;
+  height: 8rem;
+  color: #fff;
+}

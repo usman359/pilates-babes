@@ -1,0 +1,67 @@
+.coursesBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: #fff;
+  width: 60%;
+  margin: 0 auto;
+  transform: translateY(-25%);
+  margin-bottom: -3.2rem;
+}
+
+.courseContent:nth-child(1) {
+  background-color: red;
+}
+
+.courseContent:nth-child(2) {
+  background-color: black;
+}
+
+.courseContent {
+  padding: 8rem;
+}
+
+.courseContent h1 {
+  font-size: 3.6rem;
+  font-weight: 600;
+  letter-spacing: -0.1rem;
+  margin-bottom: 1.6rem;
+  text-align: end;
+}
+
+.courseContent p {
+  font-size: 1.8rem;
+  margin-bottom: 3.2rem;
+  text-align: end;
+  line-height: 1.6;
+}
+
+.courseContent button {
+  border: 3px solid #fff;
+  color: #fff;
+  background: none;
+  font-size: 2rem;
+  padding: 1.8rem 3rem;
+  cursor: pointer;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+
+  display: flex;
+  margin-left: auto;
+}
+
+.courseContent button:hover {
+  background-color: #fff;
+  color: #666;
+}
+
+.courseContent:nth-child(2) h1 {
+  text-align: start;
+}
+
+.courseContent:nth-child(2) p {
+  text-align: start;
+}
+
+.courseContent:nth-child(2) button {
+  margin-left: 0%;
+}

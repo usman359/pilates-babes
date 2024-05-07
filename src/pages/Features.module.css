@@ -1,0 +1,56 @@
+.featuresContainer {
+  height: 35rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  margin-bottom: 6.4rem;
+}
+
+.featuresContainer .feature1 {
+  background-color: black;
+}
+
+.featuresContainer .feature2 {
+  background-color: red;
+}
+
+.featuresContainer .feature3 {
+  background-color: black;
+}
+
+.featuresContainer div .featureicon {
+  font-size: 5.2rem;
+  color: red;
+}
+
+.feature1,
+.feature2,
+.feature3 {
+  padding: 8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.feature2 .featureicon {
+  color: black !important;
+}
+
+.featureText {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featureText h4 {
+  margin-top: -1.2rem;
+  margin-bottom: 1.6rem;
+  font-size: 2.4rem;
+  letter-spacing: -0.05rem;
+}
+
+.featureText p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
