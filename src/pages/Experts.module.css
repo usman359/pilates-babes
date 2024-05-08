@@ -1,6 +1,6 @@
 .expertsContainer {
   text-align: center;
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   margin-bottom: 6.4rem;
 }
@@ -13,7 +13,7 @@
 }
 
 .expertsContainer h1 {
-  font-size: 2.4rem;
+  font-size: 4.4rem;
   letter-spacing: -0.05rem;
   margin-bottom: 2.4rem;
 }

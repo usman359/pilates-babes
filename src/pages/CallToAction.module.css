@@ -1,21 +1,15 @@
 .callToActionContainer {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
       to right bottom,
-      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("../../public/1.png");
-  background-size: cover;
-  background-position: center;
+    url("../../public/1.png"); */
+  background-color: black;
   text-align: center;
   color: #fff;
-  padding: 6.4rem;
+  padding: 8rem;
   margin-bottom: 6.4rem;
-  height: 40rem;
-}
-
-.callToActionContainer div {
-  transform: translateY(40%);
 }
 
 .callToActionContainer h1 {
@@ -26,7 +20,7 @@
 
 .callToActionContainer p {
   font-size: 1.8rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 3.2rem;
 }
 
 .callToActionContainer input {

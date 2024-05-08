@@ -5,7 +5,7 @@ import styles from "./Logo.module.css";
 export default function Logo() {
   return (
     <Link to="/">
-      <img src="logo.png" alt="Logo" className={styles.logo} />
+      <img src="logo-2.png" alt="Logo" className={styles.logo} />
     </Link>
   );
 }

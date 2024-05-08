@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./BMICalculator.module.css";
 
 function BMICalculator() {
@@ -7,6 +7,23 @@ function BMICalculator() {
   const [age, setAge] = useState("");
   const [bmi, setBmi] = useState(0);
   const [bmiCategory, setBmiCategory] = useState("");
+
+  useEffect(
+    function () {
+      if (bmi > 0) {
+        if (bmi <= 18.4) {
+          setBmiCategory("Underwight");
+        } else if (bmi <= 24.9) {
+          setBmiCategory("Normal");
+        } else if (bmi <= 29.9) {
+          setBmiCategory("Overweight");
+        } else {
+          setBmiCategory("Obese");
+        }
+      }
+    },
+    [bmi]
+  );
 
   function handleBMICalculation(e) {
     e.preventDefault();
@@ -18,23 +35,12 @@ function BMICalculator() {
     const calculatedBMI = weight / heightInMeter2;
 
     setBmi(calculatedBMI);
-
-    if (bmi > 0) {
-      if (bmi <= 18.4) {
-        setBmiCategory("Underwight");
-      } else if (bmi <= 24.9) {
-        setBmiCategory("Normal");
-      } else if (bmi <= 29.9) {
-        setBmiCategory("Overweight");
-      } else {
-        setBmiCategory("Obese");
-      }
-    }
   }
 
   return (
     <div className={styles.bmiCalculatorContainer} id="bmi">
-      <img src="3.jpg" alt="Lady training" className={styles.image} />
+      {/* <img src="1.jpg" alt="Lady training" className={styles.image} /> */}
+      <div className={styles.image}></div>
 
       <div className={styles.bmiGrid}>
         <div className={styles.bmiBox}>
@@ -77,12 +83,16 @@ function BMICalculator() {
             <button onClick={handleBMICalculation}>Calculate Now</button>
           </form>
           {bmi > 0 && (
-            <p style={{ marginTop: "0.8rem", color: "#fff" }}>
+            <p
+              style={{ marginTop: "1.2rem", color: "#fff", fontSize: "1.6rem" }}
+            >
               {`Your BMI is: ${bmi.toFixed(2)}`}
             </p>
           )}
           {bmiCategory && (
-            <p style={{ marginTop: "0.8rem", color: "red" }}>
+            <p
+              style={{ marginTop: "0.8rem", color: "red", fontSize: "1.6rem" }}
+            >
               {`You are: ${bmiCategory}`}
             </p>
           )}

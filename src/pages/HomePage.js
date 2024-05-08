@@ -13,6 +13,7 @@ import Experts from "./Experts";
 import Testimonials from "./Testimonials";
 // import Blog from "./Blog";
 import Footer from "./Footer";
+import Flag from "../components/Flag";
 
 const images = ["1.png", "2.jpg", "3.jpg"];
 
@@ -48,6 +49,20 @@ export default function HomePage() {
     setImage(images.at(counter.current));
   }
 
+  const handleScrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        behavior: "smooth",
+        top: element.offsetTop,
+      });
+    }
+  };
+
+  // function handleTranslateToGermany() {
+
+  // }
+
   return (
     <>
       <img
@@ -59,12 +74,20 @@ export default function HomePage() {
       <div className={styles.header}>
         <Logo />
         <Navbar />
+        {/* <img
+          src="germany-flag.svg"
+          alt="Germany flag"
+          className={styles.img}
+          onClick={handleTranslateToGermany}
+        /> */}
       </div>
 
       <div className={styles.textBox}>
         <span>Gym & Fitness Center</span>
         <h1>Get Body in Shape</h1>
-        <button>Join Us Now</button>
+        <button onClick={() => handleScrollTo("callToAction")}>
+          Join Us Now
+        </button>
       </div>
 
       <div className={styles.leftArrowBox} onClick={slideToPreviousImage}>

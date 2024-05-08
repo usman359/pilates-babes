@@ -1,0 +1,11 @@
+.flagContainer {
+  color: #fff;
+  /* padding: 1.6rem; */
+  display: inline-block;
+  background-color: red;
+}
+
+.img {
+  width: 10%;
+  cursor: pointer;
+}

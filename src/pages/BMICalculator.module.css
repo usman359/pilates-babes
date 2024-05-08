@@ -4,12 +4,18 @@
   margin-bottom: 6.4rem;
 }
 
-.image {
+/* .image {
   width: 70%;
   background-size: cover;
   background-position: center;
   height: 50rem;
   display: block;
+} */
+
+.image {
+  background-color: #1a1a1a;
+  height: 50rem;
+  width: 70%;
 }
 
 .bmiGrid {

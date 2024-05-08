@@ -26,18 +26,22 @@ function Footer() {
             <span>info@gmail.com</span>
           </div>
           <div className={styles.addressBox}>
-            <span className={styles.logos}>
-              <ion-icon name="logo-twitter"></ion-icon>
-            </span>
-            <span className={styles.logos}>
-              <ion-icon name="logo-facebook"></ion-icon>
-            </span>
-            <span className={styles.logos}>
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </span>
-            <span className={styles.logos}>
+            <a
+              href="https://www.youtube.com/channel/UCPLFNJnvveD4BpvzVB-clrg"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.logos}
+            >
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+            <a
+              href="https://www.instagram.com/thepilatesbabe_/"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.logos}
+            >
               <ion-icon name="logo-instagram"></ion-icon>
-            </span>
+            </a>
           </div>
         </div>
 
@@ -53,25 +57,25 @@ function Footer() {
             <span>
               <ion-icon name="caret-forward-outline"></ion-icon>
             </span>
+            <span>Courses</span>
+          </div>
+          <div className={styles.linkBox}>
+            <span>
+              <ion-icon name="caret-forward-outline"></ion-icon>
+            </span>
             <span>About Us</span>
           </div>
           <div className={styles.linkBox}>
             <span>
               <ion-icon name="caret-forward-outline"></ion-icon>
             </span>
-            <span>Our Features</span>
+            <span>Features</span>
           </div>
           <div className={styles.linkBox}>
             <span>
               <ion-icon name="caret-forward-outline"></ion-icon>
             </span>
-            <span>Classes</span>
-          </div>
-          <div className={styles.linkBox}>
-            <span>
-              <ion-icon name="caret-forward-outline"></ion-icon>
-            </span>
-            <span>Contact Us</span>
+            <span>Calendar</span>
           </div>
         </div>
 
@@ -87,25 +91,25 @@ function Footer() {
             <span>
               <ion-icon name="caret-forward-outline"></ion-icon>
             </span>
+            <span>Courses</span>
+          </div>
+          <div className={styles.linkBox}>
+            <span>
+              <ion-icon name="caret-forward-outline"></ion-icon>
+            </span>
             <span>About Us</span>
           </div>
           <div className={styles.linkBox}>
             <span>
               <ion-icon name="caret-forward-outline"></ion-icon>
             </span>
-            <span>Our Features</span>
+            <span>Features</span>
           </div>
           <div className={styles.linkBox}>
             <span>
               <ion-icon name="caret-forward-outline"></ion-icon>
             </span>
-            <span>Classes</span>
-          </div>
-          <div className={styles.linkBox}>
-            <span>
-              <ion-icon name="caret-forward-outline"></ion-icon>
-            </span>
-            <span>Contact Us</span>
+            <span>Calendar</span>
           </div>
         </div>
 
