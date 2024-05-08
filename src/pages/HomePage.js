@@ -13,7 +13,7 @@ import Experts from "./Experts";
 import Testimonials from "./Testimonials";
 // import Blog from "./Blog";
 import Footer from "./Footer";
-import Flag from "../components/Flag";
+import { handleScrollTo } from "../helpers/scroll";
 
 const images = ["1.png", "2.jpg", "3.jpg"];
 
@@ -49,22 +49,12 @@ export default function HomePage() {
     setImage(images.at(counter.current));
   }
 
-  const handleScrollTo = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      window.scrollTo({
-        behavior: "smooth",
-        top: element.offsetTop,
-      });
-    }
-  };
-
   // function handleTranslateToGermany() {
 
   // }
 
   return (
-    <>
+    <div id="home">
       <img
         src={image}
         alt="Lady telling about fitness"
@@ -109,6 +99,6 @@ export default function HomePage() {
       <Testimonials />
       {/* <Blog /> */}
       <Footer />
-    </>
+    </div>
   );
 }

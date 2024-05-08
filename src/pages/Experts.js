@@ -4,20 +4,42 @@ import styles from "./Experts.module.css";
 function Experts() {
   return (
     <div className={styles.expertsContainer}>
-      <strong>Our Trainers</strong>
-      <h1>Meet Our Export Trainers</h1>
+      <strong>Retreats & Events 2024</strong>
+      <h1>Meet Our Expert Trainers</h1>
       <div className={styles.expertsGrid}>
-        <div className={styles.imageBox}>
+        <div className={styles.imageAndTextBox}>
           <img src="hero-img.jpg" alt="Trainer" className={styles.image} />
+          <div>
+            <h3>Trainer Name</h3>
+            <p>Trainer</p>
+          </div>
         </div>
         <div className={styles.imageBox}>
-          <img src="hero-img.jpg" alt="Trainer" className={styles.image} />
+          <div className={styles.imageAndTextBox}>
+            <img src="hero-img.jpg" alt="Trainer" className={styles.image} />
+            <div>
+              <h3>Trainer Name</h3>
+              <p>Trainer</p>
+            </div>
+          </div>
         </div>
         <div className={styles.imageBox}>
-          <img src="hero-img.jpg" alt="Trainer" className={styles.image} />
+          <div className={styles.imageAndTextBox}>
+            <img src="hero-img.jpg" alt="Trainer" className={styles.image} />
+            <div>
+              <h3>Trainer Name</h3>
+              <p>Trainer</p>
+            </div>
+          </div>
         </div>
         <div className={styles.imageBox}>
-          <img src="hero-img.jpg" alt="Trainer" className={styles.image} />
+          <div className={styles.imageAndTextBox}>
+            <img src="hero-img.jpg" alt="Trainer" className={styles.image} />
+            <div>
+              <h3>Trainer Name</h3>
+              <p>Trainer</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

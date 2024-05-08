@@ -21,39 +21,68 @@
 .expertsGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.6rem;
+  gap: 3.2rem;
   transition: all 0.4s;
 }
 
-.imageBox {
-  position: relative; /* Ensures the pseudo-element is positioned relative to this */
+.imageAndTextBox {
+  position: relative;
+  transition: all 0.4s;
+}
+
+
+.imageAndTextBox div {
+  background-color: black;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imageAndTextBox div h3 {
+  color: red;
+  font-size: 1.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.imageAndTextBox div p {
+  color: white;
+  font-size: 1.6rem;
 }
 
 .image {
   width: 100%;
-  border-bottom: 7rem solid black;
+  height: 40rem;
+  display: block;
 }
 
-.imageBox::before {
+.textContainer {
+  background-color: black;
+  color: #fff;
+}
+
+/* .imageBox::before {
   content: "Trainer Name";
-  display: block;
-  width: 100%;
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
-  /* background-color: red; */
-  color: red;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translateY(-70%);
+  background-color: red;
+  display: inline-block;
+
   font-size: 1.8rem;
-  letter-spacing: -0.05rem;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .imageBox::after {
   content: "Trainer";
   display: block;
-  width: 100%;
+ 
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
   color: #fff;
@@ -62,4 +91,4 @@
   left: 0;
   transform: translateY(-30%);
   font-size: 1.2rem;
-}
+} */

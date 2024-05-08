@@ -23,12 +23,7 @@
   font-size: 1.8rem;
 }
 
-.linkBox span {
-  cursor: pointer;
-}
-
-.addressBox:not(:last-child),
-.linkBox:not(:last-child) {
+.addressBox:not(:last-child) {
   margin-bottom: 1.2rem;
 }
 
@@ -60,7 +55,7 @@
 }
 
 .timeContainer:not(:last-child) {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.6rem;
 }
 
 .horizontalLine {

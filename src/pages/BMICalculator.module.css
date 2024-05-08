@@ -2,32 +2,28 @@
   background-color: black;
   position: relative;
   margin-bottom: 6.4rem;
-}
-
-/* .image {
-  width: 70%;
-  background-size: cover;
-  background-position: center;
   height: 50rem;
-  display: block;
-} */
-
-.image {
-  background-color: #1a1a1a;
-  height: 50rem;
-  width: 70%;
-}
-
-.bmiGrid {
-  display: grid;
-  grid-template-columns: 70fr 30fr;
+  width: 80%;
 }
 
 .bmiBox {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  padding: 3.2rem;
+  display: flex;
+  gap: 3.2rem;
+  height: 50rem;
+}
+
+.bmiTextBox {
+  padding: 4.8rem;
+  background-image: linear-gradient(
+    to left bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(114, 114, 114, 0.5)
+  );
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .bmiBox h3 {
@@ -53,17 +49,16 @@
 }
 
 .calculateBmiBox {
-  position: absolute;
-  top: 20%;
-  right: 5%;
-  width: 25%;
-  padding: 3.2rem;
+  padding: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .calculateBmiBox h2 {
   font-size: 2rem;
   color: #fff;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2.4rem;
 }
 
 .inputs {
@@ -78,10 +73,11 @@
   background-color: #aaa;
   color: #fff;
   font-size: 1.8rem;
+  border: none;
 }
 
 .inputs input::placeholder {
-  color: #777;
+  color: #fff;
 }
 
 .inputs select {
@@ -89,19 +85,23 @@
   font-family: inherit;
   background-color: #aaa;
   font-size: 1.8rem;
-  color: #777;
+  color: #fff;
 }
 
 .inputs button {
   grid-column: 1 / -1;
-  padding: 1.2rem;
+  padding: 1.6rem;
   font-family: inherit;
   background-color: #aaa;
   cursor: pointer;
   transition: all 0.4s;
   font-size: 1.8rem;
+  color: #fff;
+  background-color: red;
+  border: 1px solid #fff;
+  transition: all 0.3s;
 }
 
 .inputs button:hover {
-  background-color: #777;
+  background-color: black;
 }

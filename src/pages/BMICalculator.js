@@ -39,17 +39,16 @@ function BMICalculator() {
 
   return (
     <div className={styles.bmiCalculatorContainer} id="bmi">
-      {/* <img src="1.jpg" alt="Lady training" className={styles.image} /> */}
-      <div className={styles.image}></div>
-
-      <div className={styles.bmiGrid}>
-        <div className={styles.bmiBox}>
+      <div className={styles.bmiBox}>
+        <div className={styles.bmiTextBox}>
           <h3>Body Mass Index</h3>
           <h1>What is BMI?</h1>
           <p>
-            Vero elitr lorem magna justo magna justo at justo est ipsum sed
-            clita lorem dolor ipsum sed. Lorem sea lorem vero. Sanct dolor clita
-            clita rebum kasd magna erat diam
+            Body Mass Index (BMI) is a person's weight in kilograms divided by
+            the square of height in meters. A high BMI can indicate high body
+            fatness. BMI screens for weight categories that may lead to health
+            problems, but it does not diagnose the body fatness or health of an
+            individual.
           </p>
         </div>
 

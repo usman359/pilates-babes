@@ -1,17 +1,8 @@
 import React from "react";
 import styles from "./Navbar.module.css";
+import { handleScrollTo } from "../helpers/scroll";
 
 export default function Navbar() {
-  const handleScrollTo = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      window.scrollTo({
-        behavior: "smooth",
-        top: element.offsetTop,
-      });
-    }
-  };
-
   return (
     <ul className={styles.navbar}>
       <li className={styles.active}>Home</li>

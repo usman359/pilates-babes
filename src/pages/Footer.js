@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
+import FooterNav from "../components/FooterNav";
 
 function Footer() {
   return (
@@ -47,70 +48,12 @@ function Footer() {
 
         <div>
           <h1>Quick Links</h1>
-          <div className={styles.linkBox}>
-            <span>
-              <ion-icon name="caret-forward-outline"></ion-icon>
-            </span>
-            <span>Home</span>
-          </div>
-          <div className={styles.linkBox}>
-            <span>
-              <ion-icon name="caret-forward-outline"></ion-icon>
-            </span>
-            <span>Courses</span>
-          </div>
-          <div className={styles.linkBox}>
-            <span>
-              <ion-icon name="caret-forward-outline"></ion-icon>
-            </span>
-            <span>About Us</span>
-          </div>
-          <div className={styles.linkBox}>
-            <span>
-              <ion-icon name="caret-forward-outline"></ion-icon>
-            </span>
-            <span>Features</span>
-          </div>
-          <div className={styles.linkBox}>
-            <span>
-              <ion-icon name="caret-forward-outline"></ion-icon>
-            </span>
-            <span>Calendar</span>
-          </div>
+          <FooterNav />
         </div>
 
         <div>
           <h1>Regular Links</h1>
-          <div className={styles.linkBox}>
-            <span>
-              <ion-icon name="caret-forward-outline"></ion-icon>
-            </span>
-            <span>Home</span>
-          </div>
-          <div className={styles.linkBox}>
-            <span>
-              <ion-icon name="caret-forward-outline"></ion-icon>
-            </span>
-            <span>Courses</span>
-          </div>
-          <div className={styles.linkBox}>
-            <span>
-              <ion-icon name="caret-forward-outline"></ion-icon>
-            </span>
-            <span>About Us</span>
-          </div>
-          <div className={styles.linkBox}>
-            <span>
-              <ion-icon name="caret-forward-outline"></ion-icon>
-            </span>
-            <span>Features</span>
-          </div>
-          <div className={styles.linkBox}>
-            <span>
-              <ion-icon name="caret-forward-outline"></ion-icon>
-            </span>
-            <span>Calendar</span>
-          </div>
+          <FooterNav />
         </div>
 
         <div>
@@ -129,7 +72,7 @@ function Footer() {
       <div className={styles.lineAndPara}>
         <hr className={styles.horizontalLine} />
         <p className={styles.footerParagraph}>
-          &copy; Your Site Name. All Rights Reserved.
+          &copy; Pilates Babes. All Rights Reserved.
         </p>
       </div>
     </div>
