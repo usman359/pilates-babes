@@ -72,7 +72,7 @@ function Footer() {
       <div className={styles.lineAndPara}>
         <hr className={styles.horizontalLine} />
         <p className={styles.footerParagraph}>
-          &copy; Pilates Babes. All Rights Reserved.
+          &copy; Body mirror by Sema. All Rights Reserved.
         </p>
       </div>
     </div>

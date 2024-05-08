@@ -1,3 +1,6 @@
+.homePageContainer {
+}
+
 .heroImg {
   width: 100%;
   height: 125vh;
@@ -35,7 +38,7 @@
 .header {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 25%;
   width: 100%;
 
   padding: 1.6rem;
@@ -43,6 +46,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.5);
+  width: 50%;
 }
 
 .textBox {

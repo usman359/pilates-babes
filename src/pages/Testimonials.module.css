@@ -4,6 +4,7 @@
   margin-left: auto;
   margin-bottom: 6.4rem;
   height: 50rem;
+  background-color: black;
 }
 
 .testimonialContentContainer {
@@ -107,6 +108,7 @@
   color: gray;
   border: none;
   cursor: pointer;
+  border-radius: 1px;
   transition: all 0.4s ease-in-out;
 }
 

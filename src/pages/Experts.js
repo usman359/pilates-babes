@@ -8,7 +8,7 @@ function Experts() {
       <h1>Meet Our Expert Trainers</h1>
       <div className={styles.expertsGrid}>
         <div className={styles.imageAndTextBox}>
-          <img src="hero-img.jpg" alt="Trainer" className={styles.image} />
+          <img src="expert-1.webp" alt="Trainer" className={styles.image} />
           <div>
             <h3>Upper Austria</h3>
             <p>Bad Leonfelden</p>
@@ -16,7 +16,7 @@ function Experts() {
         </div>
         <div className={styles.imageBox}>
           <div className={styles.imageAndTextBox}>
-            <img src="hero-img.jpg" alt="Trainer" className={styles.image} />
+            <img src="expert-2.webp" alt="Trainer" className={styles.image} />
             <div>
               <h3>Styria</h3>
               <p>Schladming </p>
@@ -25,7 +25,7 @@ function Experts() {
         </div>
         <div className={styles.imageBox}>
           <div className={styles.imageAndTextBox}>
-            <img src="hero-img.jpg" alt="Trainer" className={styles.image} />
+            <img src="expert-3.webp" alt="Trainer" className={styles.image} />
             <div>
               <h3>Carinthia</h3>
               <p>Nassfeld </p>
@@ -34,7 +34,7 @@ function Experts() {
         </div>
         <div className={styles.imageBox}>
           <div className={styles.imageAndTextBox}>
-            <img src="hero-img.jpg" alt="Trainer" className={styles.image} />
+            <img src="expert-4.webp" alt="Trainer" className={styles.image} />
             <div>
               <h3>Styria</h3>
               <p>Schladming </p>

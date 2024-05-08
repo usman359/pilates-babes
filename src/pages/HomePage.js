@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Logo from "../components/Logo";
-import Navbar from "../components/Navbar";
+import Nav1 from "../components/Nav1";
 import styles from "./Homepage.module.css";
 import Courses from "./Courses";
 import TimeTable from "./TimeTable";
@@ -14,6 +14,7 @@ import Testimonials from "./Testimonials";
 // import Blog from "./Blog";
 import Footer from "./Footer";
 import { handleScrollTo } from "../helpers/scroll";
+import Nav2 from "../components/Nav2";
 
 const images = ["1.png", "2.jpg", "3.jpg"];
 
@@ -54,7 +55,7 @@ export default function HomePage() {
   // }
 
   return (
-    <div id="home">
+    <div className={styles.homePageContainer} id="home">
       <img
         src={image}
         alt="Lady telling about fitness"
@@ -62,8 +63,14 @@ export default function HomePage() {
       />
 
       <div className={styles.header}>
+        <div>
+          <Nav1 />
+        </div>
         <Logo />
-        <Navbar />
+        <div>
+          <Nav2 />
+        </div>
+        {/* <Navbar /> */}
         {/* <img
           src="germany-flag.svg"
           alt="Germany flag"
