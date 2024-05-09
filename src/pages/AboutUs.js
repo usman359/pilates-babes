@@ -9,10 +9,7 @@ function AboutUs() {
       </div>
       <div className={styles.textBox}>
         <h1>10 Years Experience</h1>
-        <p>
-          Labore vero lorem eos sed aliquy ipsum aliquy sed. Vero dolore dolore
-          takima ipsum lorem rebum
-        </p>
+        <p>Labore vero lorem eos sed aliquy ipsum aliquy sed.</p>
 
         <div className={styles.accomplishment}>
           <div>
