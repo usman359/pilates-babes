@@ -43,6 +43,10 @@ function Testimonials() {
     };
   }, []);
 
+  function handleSliderClick(index) {
+    setCurrentClient(index);
+  }
+
   return (
     <div className={styles.testimonialContainer}>
       <div className={styles.testimonialContentContainer}>
@@ -70,6 +74,7 @@ function Testimonials() {
                 className={`${styles.slider} ${
                   currentClient === index && styles.active
                 }`}
+                onClick={() => handleSliderClick(index)}
               />
             ))}
           </div>

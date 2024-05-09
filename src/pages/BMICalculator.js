@@ -37,8 +37,25 @@ function BMICalculator() {
     setBmi(calculatedBMI);
   }
 
+  function handleOutsideInputClick(e) {
+    if (
+      e.target.nodeName === "BUTTON" ||
+      e.target.nodeName === "INPUT" ||
+      e.target.nodeName === "SELECT"
+    ) {
+      return;
+    }
+    setWeight("");
+    setHeight("");
+    setAge("");
+  }
+
   return (
-    <div className={styles.bmiCalculatorContainer} id="bmi">
+    <div
+      className={styles.bmiCalculatorContainer}
+      id="bmi"
+      onClick={handleOutsideInputClick}
+    >
       <div className={styles.bmiBox}>
         <div className={styles.bmiTextBox}>
           <h3>Body Mass Index</h3>

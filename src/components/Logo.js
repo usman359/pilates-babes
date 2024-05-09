@@ -4,9 +4,9 @@ import styles from "./Logo.module.css";
 
 export default function Logo() {
   return (
-    <div>
+    <div className={styles.logoBox}>
       <Link to="/">
-        <img src="logo.png" alt="Logo" className={styles.logo} />
+        <img src="logo-new.jpg" alt="Logo" className={styles.logo} />
       </Link>
     </div>
   );
