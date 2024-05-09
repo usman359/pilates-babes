@@ -18,6 +18,7 @@
 }
 
 .navbar li {
+  font-size: 2rem;
   transition: all 0.2s;
 }
 

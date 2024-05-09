@@ -54,3 +54,12 @@
   font-size: 1.8rem;
   line-height: 1.5;
 }
+
+/* 616px => 616/16 = 39 */
+@media (max-width: 39em) {
+  .featuresContainer {
+    height: auto;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}

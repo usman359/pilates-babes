@@ -32,7 +32,7 @@
   font-size: 1.8rem;
   margin-bottom: 3.2rem;
   text-align: end;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .courseContent button {
@@ -64,4 +64,12 @@
 
 .courseContent:nth-child(2) button {
   margin-left: 0%;
+}
+
+/* Media Queries */
+/* 935px => 935/16 = 58.44em */
+@media (max-width: 58.44em) {
+  .coursesBox {
+    width: 90%;
+  }
 }

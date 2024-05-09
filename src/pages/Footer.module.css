@@ -31,6 +31,10 @@
   cursor: pointer;
 }
 
+.addressBox span {
+  line-height: 1.5;
+}
+
 .logos {
   color: #fff;
   font-size: 1.6rem;
@@ -51,7 +55,7 @@
 }
 
 .timeContainer strong {
-  margin-bottom: 0.4rem;
+  margin-bottom: 1rem;
 }
 
 .timeContainer:not(:last-child) {
@@ -72,4 +76,25 @@
 
 .lineAndPara {
   color: #fff;
+}
+
+/* 935px => 935/16 = 59em */
+@media (max-width: 59em) {
+  .footerGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9.6rem;
+  }
+}
+
+/* 700px => 700/16 = 44em */
+@media (max-width: 44em) {
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 542px => 542/16 = 33.875em */
+@media (max-width: 34em) {
+  .footerContainer {
+  }
 }

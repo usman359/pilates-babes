@@ -5,7 +5,7 @@ function Experts() {
   return (
     <div className={styles.expertsContainer}>
       <strong>Retreats & Events 2024</strong>
-      <h1>Meet Our Expert Trainers</h1>
+      <h1>Physical Fitness is the First Require of Happiness</h1>
       <div className={styles.expertsGrid}>
         <div className={styles.imageAndTextBox}>
           <img src="expert-1.webp" alt="Trainer" className={styles.image} />

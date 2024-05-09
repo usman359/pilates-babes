@@ -27,9 +27,13 @@
 
 .imageAndTextBox {
   position: relative;
+  overflow: hidden;
   transition: all 0.4s;
 }
 
+.imageAndTextBox:hover {
+  transform: scale(1.05);
+}
 
 .imageAndTextBox div {
   background-color: black;
@@ -39,10 +43,6 @@
   left: 0;
   width: 100%;
   padding: 2.4rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .imageAndTextBox div h3 {
@@ -67,28 +67,19 @@
   color: #fff;
 }
 
-/* .imageBox::before {
-  content: "Trainer Name";
-  background-color: red;
-  display: inline-block;
-
-  font-size: 1.8rem;
-  font-weight: 700;
-  position: absolute;
-  top: 0;
-  left: 0;
+/* 1200px => 1200/16 = 75em */
+@media (max-width: 75em) {
+  .expertsGrid {
+    gap: 1.6rem;
+  }
 }
 
-.imageBox::after {
-  content: "Trainer";
-  display: block;
- 
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
-  color: #fff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translateY(-30%);
-  font-size: 1.2rem;
-} */
+/* 1475px => 1475/16 = 119em */
+@media (max-width: 60em) {
+  .expertsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem;
+    transition: all 0.4s;
+  }
+}

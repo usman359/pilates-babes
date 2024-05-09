@@ -2,14 +2,13 @@
   background-color: black;
   position: relative;
   margin-bottom: 6.4rem;
-  height: 50rem;
   width: 80%;
 }
 
 .bmiBox {
   display: flex;
-  gap: 3.2rem;
-  height: 50rem;
+  flex-direction: column; /* Change to column for smaller screens */
+  align-items: center; /* Center content horizontally */
 }
 
 .bmiTextBox {
@@ -22,28 +21,24 @@
   width: 70%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center; /* Center content horizontally */
   justify-content: center;
 }
 
 .bmiBox h3 {
   color: red;
   margin-bottom: 1.6rem;
-  width: 50%;
   font-size: 1.8rem;
 }
 
 .bmiBox h1 {
   font-size: 4.4rem;
-  width: 50%;
   margin-bottom: 1.6rem;
   color: #fff;
-  margin-bottom: 2.4rem;
 }
 
 .bmiBox p {
   font-size: 1.8rem;
-  width: 50%;
   line-height: 1.5;
   color: #fff;
 }
@@ -53,6 +48,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center; /* Center content horizontally */
 }
 
 .calculateBmiBox h2 {
@@ -104,4 +100,29 @@
 
 .inputs button:hover {
   background-color: black;
+}
+
+/* Media Queries */
+/* 935px => 935/16 = 58.44em */
+@media (max-width: 58.44em) {
+  .bmiCalculatorContainer,
+  .bmiBox,
+  .bmiTextBox {
+    width: 100%;
+  }
+
+  .calculateBmiBox {
+    padding: 9.6rem;
+  }
+
+  .inputs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* 542px => 542/16 = 33.875em */
+@media (max-width: 33.875em) {
+  .bmiTextBox {
+    width: 100%;
+  }
 }
