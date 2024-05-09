@@ -17,7 +17,7 @@ import { handleScrollTo } from "../helpers/scroll";
 import Nav2 from "../components/Nav2";
 import { RxHamburgerMenu } from "react-icons/rx";
 
-const images = ["1.png", "2.jpg", "3.jpg"];
+const images = ["1-min.png", "2-min.jpg", "3-min.jpg"];
 
 export default function HomePage() {
   const [image, setImage] = useState(images.at(0));
