@@ -83,3 +83,14 @@
 .exercises td span {
   font-weight: lighter;
 }
+
+/* 542px => 542/16 = 33.875em */
+@media (max-width: 34em) {
+  .scheduleContainer {
+    /* width: 90%; */
+  }
+
+  .timeTableContainer {
+    display: none;
+  }
+}
