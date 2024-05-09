@@ -15,9 +15,9 @@ function Benefits() {
           <div className={styles.benefitText}>
             <h3>Videos Instruction</h3>
             <p>
-              Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et
-              lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima
-              erat tempor
+              Video introduction is a concise presentation that offers an
+              overview of the content, purpose, and highlights of the upcoming
+              video.
             </p>
           </div>
         </div>
@@ -29,9 +29,9 @@ function Benefits() {
           <div className={styles.benefitText}>
             <h3>Training Calendar</h3>
             <p>
-              Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et
-              lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima
-              erat tempor
+              A training calendar provides a structured plan outlining workout
+              sessions, rest days, and specific exercises tailored to individual
+              fitness goals over a designated period.
             </p>
           </div>
         </div>
@@ -43,9 +43,9 @@ function Benefits() {
           <div className={styles.benefitText}>
             <h3>Free Apps & Wifi</h3>
             <p>
-              Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et
-              lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima
-              erat tempor
+              Free apps and WiFi are invaluable resources for staying connected
+              and accessing a wide range of digital services and content without
+              any cost.
             </p>
           </div>
         </div>
@@ -57,9 +57,9 @@ function Benefits() {
           <div className={styles.benefitText}>
             <h3>Community Support</h3>
             <p>
-              Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et
-              lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima
-              erat tempor
+              Community support fosters a sense of belonging, provides
+              encouragement, and facilitates shared learning experiences among
+              individuals pursuing common goals.
             </p>
           </div>
         </div>

@@ -11,8 +11,8 @@ function Features() {
         <div className={styles.featureText}>
           <h4>Progression</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
-            suscipit orci velit id libero
+            Progression is the journey towards improvement and growth, marked by
+            continuous advancement and development.
           </p>
         </div>
       </div>
@@ -24,8 +24,8 @@ function Features() {
         <div className={styles.featureText}>
           <h4>Workout</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
-            suscipit orci velit id libero
+            Workout involves physical activity designed to improve strength,
+            endurance, flexibility, or overall fitness levels.
           </p>
         </div>
       </div>
@@ -37,8 +37,8 @@ function Features() {
         <div className={styles.featureText}>
           <h4>Nutrition</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
-            suscipit orci velit id libero
+            Nutrition is the process of providing or obtaining the necessary
+            food and nutrients for health, growth, and vitality.
           </p>
         </div>
       </div>
