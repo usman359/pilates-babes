@@ -15,11 +15,13 @@ import Testimonials from "./Testimonials";
 import Footer from "./Footer";
 import { handleScrollTo } from "../helpers/scroll";
 import Nav2 from "../components/Nav2";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const images = ["1.png", "2.jpg", "3.jpg"];
 
 export default function HomePage() {
   const [image, setImage] = useState(images.at(0));
+  const [navBox, setNavBox] = useState(false);
   const counter = useRef(0);
 
   useEffect(function () {
@@ -50,9 +52,9 @@ export default function HomePage() {
     setImage(images.at(counter.current));
   }
 
-  // function handleTranslateToGermany() {
-
-  // }
+  function handleToggleNavBox() {
+    setNavBox((open) => !open);
+  }
 
   return (
     <div className={styles.homePageContainer} id="home">
@@ -62,7 +64,7 @@ export default function HomePage() {
         className={`${styles.heroImg}`}
       />
 
-      <div className={styles.header}>
+      <div className={`${styles.header}`}>
         <div>
           <Nav1 />
         </div>
@@ -77,6 +79,27 @@ export default function HomePage() {
           className={styles.img}
           onClick={handleTranslateToGermany}
         /> */}
+      </div>
+      <div className={`${styles.hamburgerBox}`}>
+        <div className={`${styles.hamburger}`}>
+          <img src="logo.png" alt="Logo" className={styles.logo} />
+          <RxHamburgerMenu
+            className={styles.hamburgerIcon}
+            onClick={handleToggleNavBox}
+          />
+        </div>
+        {navBox && (
+          <div id="navBox" className={`${styles.navBox}`}>
+            <ul className={`${styles.navBoxUl}`}>
+              <li onClick={() => handleScrollTo("home")}>Home</li>
+              <li onClick={() => handleScrollTo("courses")}>Courses</li>
+              <li onClick={() => handleScrollTo("aboutUs")}>About Us</li>
+              <li onClick={() => handleScrollTo("features")}>Features</li>
+              <li onClick={() => handleScrollTo("calendar")}>Calendar</li>
+              <li onClick={() => handleScrollTo("bmi")}>BMI</li>
+            </ul>
+          </div>
+        )}
       </div>
 
       <div className={styles.textBox}>

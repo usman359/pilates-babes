@@ -2,13 +2,14 @@
   background-color: black;
   position: relative;
   margin-bottom: 6.4rem;
+  /* height: 50rem; */
   width: 80%;
 }
 
 .bmiBox {
   display: flex;
-  flex-direction: column; /* Change to column for smaller screens */
-  align-items: center; /* Center content horizontally */
+  gap: 3.2rem;
+  height: 50rem;
 }
 
 .bmiTextBox {
@@ -21,24 +22,28 @@
   width: 70%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content horizontally */
+  align-items: flex-end;
   justify-content: center;
 }
 
 .bmiBox h3 {
   color: red;
   margin-bottom: 1.6rem;
+  width: 50%;
   font-size: 1.8rem;
 }
 
 .bmiBox h1 {
   font-size: 4.4rem;
+  width: 50%;
   margin-bottom: 1.6rem;
   color: #fff;
+  margin-bottom: 2.4rem;
 }
 
 .bmiBox p {
   font-size: 1.8rem;
+  width: 50%;
   line-height: 1.5;
   color: #fff;
 }
@@ -48,7 +53,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Center content horizontally */
 }
 
 .calculateBmiBox h2 {
@@ -102,17 +106,25 @@
   background-color: black;
 }
 
-/* Media Queries */
-/* 935px => 935/16 = 58.44em */
-@media (max-width: 58.44em) {
-  .bmiCalculatorContainer,
-  .bmiBox,
-  .bmiTextBox {
+/* 935px => 935/16 = 59em */
+@media (max-width: 59em) {
+  .bmiCalculatorContainer {
     width: 100%;
   }
 
   .calculateBmiBox {
     padding: 9.6rem;
+  }
+}
+
+/* 700px => 700/16 = 44em */
+@media (max-width: 44em) {
+  .bmiTextBox {
+    align-items: center;
+  }
+
+  .calculateBmiBox {
+    /* padding: 16rem; */
   }
 
   .inputs {
@@ -120,9 +132,16 @@
   }
 }
 
-/* 542px => 542/16 = 33.875em */
-@media (max-width: 33.875em) {
-  .bmiTextBox {
+/* 542px => 542/16 = 34 */
+@media (max-width: 34em) {
+  .bmiCalculatorContainer {
+    height: auto;
     width: 100%;
+  }
+  .bmiBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
   }
 }
