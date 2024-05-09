@@ -48,6 +48,8 @@ function BMICalculator() {
     setWeight("");
     setHeight("");
     setAge("");
+    setBmi(0);
+    setBmiCategory("");
   }
 
   return (
