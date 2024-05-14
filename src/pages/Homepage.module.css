@@ -1,8 +1,13 @@
+.homePageContainer {
+  /* margin-bottom: 8rem; */
+}
+
 .heroImg {
   width: 100%;
   height: 125vh;
   background-size: cover;
   background-position: center;
+  display: block;
   transition: all 0.4s ease-in-out;
 }
 

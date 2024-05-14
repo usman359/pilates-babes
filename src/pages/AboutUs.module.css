@@ -1,11 +1,12 @@
 .aboutUsContainer {
   width: 60%;
   margin: 0 auto;
-  margin-bottom: 6.4rem;
+  margin-bottom: 8rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3.2rem;
+  height: 100vh;
 }
 
 .image {
