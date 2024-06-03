@@ -6,7 +6,7 @@ function Products({ imageSrc, title, price, soldOut, description }) {
       {/* Pilates babes product grid container */}
       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
         {/* Image container */}
-        <div className="flex justify-end">
+        <div className="flex justify-center">
           <img
             src={imageSrc}
             alt="Pilate babes cap"
@@ -15,7 +15,7 @@ function Products({ imageSrc, title, price, soldOut, description }) {
         </div>
 
         {/* Content container */}
-        <div className="mt-2 text-3xl">
+        <div className="mt-2 justify-self-center text-3xl">
           <h6 className="mb-8 text-xl font-light uppercase">
             Pilates babes the shop
           </h6>
