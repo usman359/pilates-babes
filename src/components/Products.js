@@ -20,7 +20,7 @@ function Products({ imageSrc, title, price, soldOut, description }) {
             Pilates babes the shop
           </h6>
           <h4 className="mb-12 text-5xl capitalize">{title}</h4>
-          <div className="mb-8 flex items-center gap-2">
+          <div className="mb-8 flex items-center gap-4">
             <span>{`€${price}.00 EUR`}</span>
             {soldOut && (
               <span className="rounded-full bg-red-300 px-6 py-2 text-white">
