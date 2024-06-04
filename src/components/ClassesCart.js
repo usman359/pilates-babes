@@ -1,6 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 
-function ClassesCart({ type, imageSrc, title, price, soldOut, description }) {
+function ClassesCart({
+  id,
+  type,
+  imageSrc,
+  title,
+  price,
+  soldOut,
+  description,
+  classCartItems,
+  setclassCartItems,
+}) {
+  const [quantity, setQuantity] = useState(1);
+
+  function handleDecQuantity() {
+    if (quantity > 1) {
+      const decQuantity = quantity - 1;
+      setQuantity(decQuantity);
+      setclassCartItems((prevItems) => {
+        return prevItems.map((item) =>
+          item.id === id ? { ...item, quantity: decQuantity } : item,
+        );
+      });
+    }
+  }
+
+  function handleIncQuantity() {
+    const incQuantity = quantity + 1;
+    setQuantity(incQuantity);
+    setclassCartItems((prevItems) => {
+      return prevItems.map((item) =>
+        item.id === id ? { ...item, quantity: incQuantity } : item,
+      );
+    });
+  }
+
+  function handleAddToCart() {
+    if (!soldOut)
+      setclassCartItems((prevItems) => [
+        ...prevItems,
+        { id, title, imageSrc, price, quantity },
+      ]);
+  }
+
   return (
     <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
       {/* Image container */}
@@ -25,15 +67,23 @@ function ClassesCart({ type, imageSrc, title, price, soldOut, description }) {
         <div className="mb-8">VAT included.</div>
         <div className="text-sm">Number</div>
         <div className="mb-8 flex w-[20%] items-center justify-between border py-4">
-          <span className="ml-4 cursor-pointer">-</span>
-          <span>1</span>
-          <span className="mr-4 cursor-pointer">+</span>
+          <span
+            className={`ml-4 cursor-pointer ${quantity === 1 ? "cursor-not-allowed" : "cursor-pointer"}`}
+            onClick={handleDecQuantity}
+          >
+            -
+          </span>
+          <span>{quantity}</span>
+          <span className="mr-4 cursor-pointer" onClick={handleIncQuantity}>
+            +
+          </span>
         </div>
         <button
-          className="mb-8 w-1/2 rounded-full border-2 border-black px-12 py-4 disabled:cursor-not-allowed"
-          disabled
+          className={`mb-8 w-1/2 rounded-full border-2 border-black px-12 py-4 transition-all duration-150 ${soldOut ? "cursor-not-allowed" : "hover:shadow-inner-border cursor-pointer"} disabled:cursor-not-allowed`}
+          disabled={soldOut || classCartItems.some((item) => item.id === id)}
+          onClick={handleAddToCart}
         >
-          Sold out
+          {soldOut ? "Sold out" : "Add"}
         </button>
         <p className="mb-8">{description}</p>
       </div>
