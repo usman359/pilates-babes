@@ -1,6 +1,6 @@
 import React from "react";
 
-function Products({ imageSrc, title, price, soldOut, description }) {
+function ClassesCart({ type, imageSrc, title, price, soldOut, description }) {
   return (
     <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
       {/* Image container */}
@@ -11,7 +11,7 @@ function Products({ imageSrc, title, price, soldOut, description }) {
       {/* Content container */}
       <div className="mt-2 justify-self-center text-3xl">
         <h6 className="mb-8 text-xl font-light uppercase">
-          Pilates babes the shop
+          Body mirror by sema the shop
         </h6>
         <h4 className="mb-12 text-5xl capitalize">{title}</h4>
         <div className="mb-8 flex items-center gap-4">
@@ -36,22 +36,9 @@ function Products({ imageSrc, title, price, soldOut, description }) {
           Sold out
         </button>
         <p className="mb-8">{description}</p>
-        {/* <div className="flex flex-col gap-2">
-            <div>
-              <span>Color: </span>
-              <span>Black</span>
-            </div>
-            <div>
-              <span>100% Cotton</span>
-            </div>
-            <div>
-              <span>PILATES BABES print on front</span>
-            </div>
-            <div>Adjustable metal fastener </div>
-          </div> */}
       </div>
     </div>
   );
 }
 
-export default Products;
+export default ClassesCart;

@@ -2,8 +2,9 @@
   background: transparent;
   color: #fff;
   cursor: pointer;
-  padding: 1.2rem 3.4rem;
+  padding: 1.2rem 3.8rem;
   border: 2px solid #fff;
+  font-size: 1.8rem;
   transition: all ease 0.3s;
 }
 

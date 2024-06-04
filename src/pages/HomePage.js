@@ -16,10 +16,13 @@ import Footer from "./Footer";
 import { handleScrollTo } from "../helpers/scroll";
 import Nav2 from "../components/Nav2";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { useNavigate } from "react-router-dom";
 
 const images = ["1-min.png", "2-min.jpg", "3-min.jpg"];
 
 export default function HomePage() {
+  const navigate = useNavigate();
+
   const [image, setImage] = useState(images.at(0));
   const [navBox, setNavBox] = useState(false);
   const counter = useRef(0);
@@ -59,7 +62,7 @@ export default function HomePage() {
   return (
     <div className={styles.homePageContainer} id="home">
       <img
-        src={image}
+        // src={image}
         alt="Lady telling about fitness"
         className={`${styles.heroImg}`}
       />
@@ -72,13 +75,6 @@ export default function HomePage() {
         <div>
           <Nav2 />
         </div>
-        {/* <Navbar /> */}
-        {/* <img
-          src="germany-flag.svg"
-          alt="Germany flag"
-          className={styles.img}
-          onClick={handleTranslateToGermany}
-        /> */}
       </div>
       <div className={`${styles.hamburgerBox}`}>
         <div className={`${styles.hamburger}`}>
@@ -95,8 +91,8 @@ export default function HomePage() {
               <li onClick={() => handleScrollTo("courses")}>Courses</li>
               <li onClick={() => handleScrollTo("aboutUs")}>About Us</li>
               <li onClick={() => handleScrollTo("features")}>Features</li>
-              {/* <li onClick={() => handleScrollTo("calendar")}>Calendar</li> */}
-              <li onClick={() => handleScrollTo("bmi")}>BMI</li>
+              <li onClick={() => navigate("classes")}>Classes</li>
+              <li onClick={() => navigate("products")}>Products</li>
             </ul>
           </div>
         )}
@@ -105,9 +101,10 @@ export default function HomePage() {
       <div className={styles.textBox}>
         <span>Gym & Fitness Center</span>
         <h1>Get Body in Shape</h1>
-        <button onClick={() => handleScrollTo("callToAction")}>
+        {/* <button onClick={() => handleScrollTo("callToAction")}>
           Join Us Now
-        </button>
+        </button> */}
+        <button onClick={() => navigate("classes")}>Book your class</button>
       </div>
 
       <div className={styles.leftArrowBox} onClick={slideToPreviousImage}>
