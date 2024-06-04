@@ -6,6 +6,22 @@ function OfferedProducts() {
   const [showCart, setShowCart] = useState(false);
   const ref = useRef();
 
+  function handleClose(e) {
+    if (ref.current && !ref.current.contains(e.target)) setShowCart(false);
+  }
+
+  function handleShowCart() {
+    if (cartItems.length > 0) setShowCart((open) => !open);
+  }
+
+  function handleItemDelete(id) {
+    setCartItems((prevItems) => {
+      const updatedItems = prevItems.filter((item) => item.id !== id);
+      if (updatedItems.length === 0) setShowCart(false);
+      return updatedItems;
+    });
+  }
+
   useEffect(() => {
     if (showCart) {
       document.addEventListener("mousedown", handleClose);
@@ -23,25 +39,9 @@ function OfferedProducts() {
   }, [cartItems]);
 
   useEffect(() => {
-    const items = JSON.parse(localStorage.getItem("cart"));
-    if (items) setCartItems(items);
+    const items = JSON.parse(localStorage.getItem("cart")) || [];
+    if (items.length > 0) setCartItems(items);
   }, []);
-
-  function handleShowCart() {
-    if (cartItems.length > 0) setShowCart((open) => !open);
-  }
-
-  function handleClose(e) {
-    if (ref.current && !ref.current.contains(e.target)) setShowCart(false);
-  }
-
-  function handleItemDelete(id) {
-    setCartItems((prevItems) => {
-      const updatedItems = prevItems.filter((item) => item.id !== id);
-      if (updatedItems.length === 0) setShowCart(false);
-      return updatedItems;
-    });
-  }
 
   return (
     <main className="p-16">
@@ -88,7 +88,7 @@ function OfferedProducts() {
 
               {/* Main */}
               <main>
-                {cartItems.map((item, index) => (
+                {cartItems.map((item) => (
                   <div
                     className="mb-8 flex items-center justify-between"
                     key={item.id}
@@ -100,6 +100,7 @@ function OfferedProducts() {
                         className="h-14 w-12"
                       />
                       <h6>{item.title}</h6>
+                      <span>({item.quantity})</span>
                     </div>
                     <div>
                       <img
@@ -119,6 +120,7 @@ function OfferedProducts() {
             </div>
           )}
         </div>
+
         <main className="flex flex-col gap-8">
           <Products
             id={1}
@@ -135,6 +137,7 @@ function OfferedProducts() {
           Contrasting crescent moon at the neck, made of own fabric
           Simple topstitching at the neckline
           Double stitching on sleeve ends, sleeve cuffs and bottom hem`}
+            cartItems={cartItems}
             setCartItems={setCartItems}
           />
           <Products
@@ -145,6 +148,7 @@ function OfferedProducts() {
             price="1.50"
             soldOut={false}
             description="Your highly coveted Pilates Babes sticker is now finally available in the shop!"
+            cartItems={cartItems}
             setCartItems={setCartItems}
           />
           <Products
@@ -155,6 +159,7 @@ function OfferedProducts() {
             price="39.00"
             soldOut={false}
             description="The baseball cap is the perfect accessory for sports or everyday life."
+            cartItems={cartItems}
             setCartItems={setCartItems}
           />
         </main>

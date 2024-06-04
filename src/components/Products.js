@@ -7,16 +7,39 @@ function Products({
   price,
   soldOut,
   description,
+  cartItems,
   setCartItems,
 }) {
   const [quantity, setQuantity] = useState(1);
 
   function handleDecQuantity() {
-    if (quantity > 1) setQuantity((q) => q - 1);
+    if (quantity > 1) {
+      const decQuantity = quantity - 1;
+      setQuantity(decQuantity);
+      setCartItems((prevItems) => {
+        return prevItems.map((item) =>
+          item.id === id ? { ...item, quantity: decQuantity } : item,
+        );
+      });
+    }
   }
 
   function handleIncQuantity() {
-    setQuantity((q) => q + 1);
+    const incQuantity = quantity + 1;
+    setQuantity(incQuantity);
+    setCartItems((prevItems) => {
+      return prevItems.map((item) =>
+        item.id === id ? { ...item, quantity: incQuantity } : item,
+      );
+    });
+  }
+
+  function handleAddToCart() {
+    if (!soldOut)
+      setCartItems((prevItems) => [
+        ...prevItems,
+        { id, title, imageSrc, price, quantity },
+      ]);
   }
 
   return (
@@ -56,13 +79,8 @@ function Products({
         </div>
         <button
           className={`mb-8 w-1/2 rounded-full border-2 border-black px-12 py-4 transition-all duration-150 ${soldOut ? "cursor-not-allowed" : "hover:shadow-inner-border cursor-pointer"} disabled:cursor-not-allowed`}
-          disabled={soldOut}
-          onClick={() =>
-            setCartItems((prevItems) => [
-              ...prevItems,
-              { id, title, imageSrc, price, quantity },
-            ])
-          }
+          disabled={soldOut || cartItems.some((item) => item.id === id)}
+          onClick={handleAddToCart}
         >
           {soldOut ? "Sold out" : "Add to cart"}
         </button>
