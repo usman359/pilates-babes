@@ -179,7 +179,7 @@
     display: block;
   }
   .textBox {
-    display: none;
+    /* display: none; */
   }
   .leftArrowBox,
   .rightArrowBox {
@@ -191,7 +191,7 @@
 @media (max-width: 33.875em) {
   .heroImg {
     width: 100%;
-    height: 60vh;
+    height: 80vh;
     background-size: cover;
     background-position: center;
   }

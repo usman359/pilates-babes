@@ -62,7 +62,7 @@ export default function HomePage() {
   return (
     <div className={styles.homePageContainer} id="home">
       <img
-        // src={image}
+        src={image}
         alt="Lady telling about fitness"
         className={`${styles.heroImg}`}
       />
@@ -115,7 +115,7 @@ export default function HomePage() {
         <ion-icon name="chevron-forward-outline"></ion-icon>
       </div>
 
-      <Courses />
+      {/* <Courses /> */}
       <AboutUs />
       <Features />
       <Benefits />
