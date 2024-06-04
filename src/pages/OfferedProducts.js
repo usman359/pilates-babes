@@ -32,9 +32,7 @@ function OfferedProducts() {
   }
 
   function handleClose(e) {
-    if (ref.current && !ref.current.contains(e.target)) {
-      setShowCart(false);
-    }
+    if (ref.current && !ref.current.contains(e.target)) setShowCart(false);
   }
 
   function handleItemDelete(id) {

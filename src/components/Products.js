@@ -20,14 +20,14 @@ function Products({
   }
 
   return (
-    <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
+    <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
       {/* Image container */}
       <div className="flex items-center justify-center">
-        <img src={imageSrc} alt="Pilate babes cap" className="block w-[80%]" />
+        <img src={imageSrc} alt="Pilate babes cap" className="w-[50%]" />
       </div>
 
       {/* Content container */}
-      <div className="mt-2 justify-self-center text-3xl">
+      <div className="mt-2 text-3xl">
         <h6 className="mb-8 text-xl font-light uppercase">
           Pilates babes the shop
         </h6>
