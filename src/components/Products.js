@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
-function Products({ imageSrc, title, price, soldOut, description }) {
+function Products({
+  id,
+  imageSrc,
+  title,
+  price,
+  soldOut,
+  description,
+  setCartItems,
+}) {
+  const [quantity, setQuantity] = useState(1);
+
+  function handleDecQuantity() {
+    if (quantity > 1) setQuantity((q) => q - 1);
+  }
+
+  function handleIncQuantity() {
+    setQuantity((q) => q + 1);
+  }
+
   return (
     <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
       {/* Image container */}
@@ -25,15 +43,28 @@ function Products({ imageSrc, title, price, soldOut, description }) {
         <div className="mb-8">VAT included.</div>
         <div className="text-sm">Number</div>
         <div className="mb-8 flex w-[20%] items-center justify-between border py-4">
-          <span className="ml-4 cursor-pointer">-</span>
-          <span>1</span>
-          <span className="mr-4 cursor-pointer">+</span>
+          <span
+            className={`ml-4 ${quantity === 1 ? "cursor-not-allowed" : "cursor-pointer"}`}
+            onClick={handleDecQuantity}
+          >
+            -
+          </span>
+          <span>{quantity}</span>
+          <span className="mr-4 cursor-pointer" onClick={handleIncQuantity}>
+            +
+          </span>
         </div>
         <button
-          className="mb-8 w-1/2 rounded-full border-2 border-black px-12 py-4 disabled:cursor-not-allowed"
-          disabled
+          className={`mb-8 w-1/2 rounded-full border-2 border-black px-12 py-4 transition-all duration-150 ${soldOut ? "cursor-not-allowed" : "hover:shadow-inner-border cursor-pointer"} disabled:cursor-not-allowed`}
+          disabled={soldOut}
+          onClick={() =>
+            setCartItems((prevItems) => [
+              ...prevItems,
+              { id, title, imageSrc, price, quantity },
+            ])
+          }
         >
-          Sold out
+          {soldOut ? "Sold out" : "Add to cart"}
         </button>
         <p className="mb-8">{description}</p>
         {/* <div className="flex flex-col gap-2">
