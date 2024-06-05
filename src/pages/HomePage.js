@@ -6,8 +6,6 @@ import TimeTable from "./TimeTable";
 import AboutUs from "./AboutUs";
 import Features from "./Features";
 import Benefits from "./Benefits";
-import CallToAction from "./CallToAction";
-import BMICalculator from "./BMICalculator";
 import Experts from "./Experts";
 import Testimonials from "./Testimonials";
 // import Blog from "./Blog";
@@ -114,16 +112,12 @@ export default function HomePage() {
         <ion-icon name="chevron-forward-outline"></ion-icon>
       </div>
 
-      {/* <Courses /> */}
       <AboutUs />
       <Features />
       <Benefits />
-      <CallToAction />
       <TimeTable />
-      <BMICalculator />
       <Experts />
       <Testimonials />
-      {/* <Blog /> */}
       <Footer />
     </div>
   );
