@@ -9,14 +9,15 @@
   /* align-content: center; */
   justify-content: center;
   height: 100vh;
+  margin-bottom: 16rem;
 }
 
 .courseContent:nth-child(1) {
-  background-color: #fb7185;
+  background-color: #f3774d;
 }
 
 .courseContent:nth-child(2) {
-  background-color: black;
+  background-color: #57534e;
 }
 
 .courseContent {

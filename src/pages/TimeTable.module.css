@@ -10,13 +10,13 @@
 
 .timeTableContainer h3 {
   font-size: 1.8rem;
-  color: red;
+  color: #f3774d;
   margin-bottom: 1.6rem;
 }
 
 .timeTableContainer h1 {
   font-size: 4.4rem;
-  color: black;
+  color: #000;
   margin-bottom: 3rem;
 }
 
@@ -36,11 +36,11 @@
 }
 
 .tabContainer span:hover {
-  color: black;
+  color: #f3774d;
 }
 
 .bgColor {
-  background-color: red;
+  background-color: #f3774d;
   color: #fff;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .days {
-  background-color: black;
+  background-color: #f3774d;
   color: #fff;
 }
 
@@ -68,7 +68,7 @@
 
 .exerciseTime {
   color: #fff;
-  background-color: black;
+  background-color: #f3774d;
 }
 
 .exerciseTime span {

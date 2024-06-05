@@ -1,5 +1,5 @@
 .aboutUsContainer {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   margin-bottom: 8rem;
   display: flex;
@@ -7,6 +7,7 @@
   justify-content: center;
   gap: 3.2rem;
   height: 100vh;
+  background-color: #000;
 }
 
 .image {

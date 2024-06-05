@@ -7,7 +7,7 @@ import Courses from "./Courses";
 import AboutUs from "./AboutUs";
 import Features from "./Features";
 import Benefits from "./Benefits";
-import Experts from "./Experts";
+// import Experts from "./Experts";
 import Testimonials from "./Testimonials";
 // import Blog from "./Blog";
 import Footer from "./Footer";
@@ -114,7 +114,7 @@ export default function HomePage() {
       <Features />
       <Benefits />
       <TimeTable />
-      <Experts />
+      {/* <Experts /> */}
       <Testimonials />
       <Footer />
     </div>

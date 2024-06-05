@@ -11,7 +11,7 @@
 }
 
 .benefitsContainer h3 {
-  color: red;
+  color: #f3774d;
   margin-bottom: 2.4rem;
   font-size: 1.6rem;
 }
@@ -32,7 +32,7 @@
 
 .benefitIcon {
   font-size: 5.2rem;
-  color: red;
+  color: #f3774d;
 }
 
 .benefitsGrid {
