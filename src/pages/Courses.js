@@ -1,7 +1,10 @@
 import React from "react";
 import styles from "./Courses.module.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Courses() {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.coursesBox} id="courses">
       <div className={styles.courseContent}>
@@ -11,7 +14,7 @@ export default function Courses() {
           practice. As always, you don't have to be a professional. I look
           forward to you. You can but don't have to turn on your camera.
         </p>
-        <button>Join Now</button>
+        <button onClick={() => navigate("classes")}>Join The Class</button>
       </div>
 
       <div className={styles.courseContent}>
@@ -21,7 +24,7 @@ export default function Courses() {
           please contact me by email at hi@pilatesbabes.com. If you have health
           problems or are pregnant, please contact me in advance.
         </p>
-        <button>Join Now</button>
+        <button onClick={() => navigate("classes")}>Private Class</button>
       </div>
     </div>
   );

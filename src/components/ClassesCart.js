@@ -70,7 +70,7 @@ function ClassesCart({
         </div>
         <div className="mb-8">VAT included.</div>
         <div className="text-sm">Number</div>
-        <div className="mb-8 flex w-[20%] items-center justify-between border py-4">
+        <div className="mb-8 flex w-[20%] items-center justify-between border border-black py-4">
           <span
             className={`ml-4 ${soldOut || quantity === 1 ? "cursor-not-allowed" : "cursor-pointer"}`}
             onClick={!soldOut && quantity > 1 ? handleDecQuantity : undefined}

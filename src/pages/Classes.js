@@ -24,6 +24,10 @@ function Classes() {
   }
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     if (showCart) {
       document.addEventListener("mousedown", handleClose);
     } else {

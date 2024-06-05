@@ -3,6 +3,7 @@ import Logo from "../components/Logo";
 import Nav1 from "../components/Nav1";
 import styles from "./Homepage.module.css";
 import TimeTable from "./TimeTable";
+import Courses from "./Courses";
 import AboutUs from "./AboutUs";
 import Features from "./Features";
 import Benefits from "./Benefits";
@@ -96,10 +97,7 @@ export default function HomePage() {
 
       <div className={styles.textBox}>
         <span>Gym & Fitness Center</span>
-        <h1>Get Body in Shape</h1>
-        {/* <button onClick={() => handleScrollTo("callToAction")}>
-          Join Us Now
-        </button> */}
+        <h1 className="tracking-tighter">Get Body in Shape</h1>
         <button onClick={() => navigate("classes")}>Book your class</button>
       </div>
 
@@ -112,6 +110,7 @@ export default function HomePage() {
       </div>
 
       <AboutUs />
+      <Courses />
       <Features />
       <Benefits />
       <TimeTable />
