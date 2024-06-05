@@ -85,11 +85,10 @@ export default function HomePage() {
           <div id="navBox" className={`${styles.navBox}`}>
             <ul className={`${styles.navBoxUl}`}>
               <li onClick={() => handleScrollTo("home")}>Home</li>
-              <li onClick={() => handleScrollTo("courses")}>Courses</li>
               <li onClick={() => handleScrollTo("aboutUs")}>About Us</li>
               <li onClick={() => handleScrollTo("features")}>Features</li>
-              <li onClick={() => navigate("classes")}>Classes</li>
               <li onClick={() => navigate("products")}>Products</li>
+              <li onClick={() => navigate("classes")}>Classes</li>
             </ul>
           </div>
         )}

@@ -3,7 +3,7 @@ import styles from "./Benefits.module.css";
 
 function Benefits() {
   return (
-    <div className={styles.benefitsContainer}>
+    <div className={styles.benefitsContainer} id="benefits">
       <h3>Why Choose Us?</h3>
       <h1>Benefits of Joining Our GYM</h1>
 

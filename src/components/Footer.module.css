@@ -9,5 +9,5 @@
   cursor: pointer;
 }
 .linkBox:not(:last-child) {
-    margin-bottom: 1.2rem;
+  margin-bottom: 1.2rem;
 }

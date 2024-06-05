@@ -48,14 +48,14 @@ function ClassesCart({
   const isButtonDisabled = isSoldOut || isInCart;
 
   return (
-    <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
+    <div className="grid gap-8 bg-stone-200 sm:grid-cols-1 md:grid-cols-2">
       {/* Image container */}
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center p-8">
         <img src={imageSrc} alt="Pilate babes cap" className="block w-[80%]" />
       </div>
 
       {/* Content container */}
-      <div className="mt-2 justify-self-center text-3xl">
+      <div className="mt-2 justify-self-center p-8 text-3xl">
         <h6 className="mb-8 text-xl font-light uppercase">
           Body mirror by sema the shop
         </h6>

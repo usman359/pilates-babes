@@ -48,7 +48,7 @@ function OfferedProducts() {
   }, [productItems]);
 
   return (
-    <main className="p-16">
+    <main className="bg-[#e7e5e4] p-16">
       <div className="relative">
         {/* Pilates babes heading */}
         <h1 className="mb-16 text-center text-5xl uppercase">Our Products</h1>
@@ -138,9 +138,7 @@ function OfferedProducts() {
           Set-in sleeve
           2x2 rib knit at neckline, sleeve ends and bottom hem
           Herringbone neckband
-          Contrasting crescent moon at the neck, made of own fabric
-          Simple topstitching at the neckline
-          Double stitching on sleeve ends, sleeve cuffs and bottom hem`}
+          `}
             productItems={productItems}
             setProductItems={setProductItems}
           />
