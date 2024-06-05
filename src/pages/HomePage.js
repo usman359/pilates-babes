@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Logo from "../components/Logo";
 import Nav1 from "../components/Nav1";
 import styles from "./Homepage.module.css";
-import Courses from "./Courses";
 import TimeTable from "./TimeTable";
 import AboutUs from "./AboutUs";
 import Features from "./Features";

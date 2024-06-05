@@ -7,8 +7,8 @@ function Products({
   price,
   soldOut,
   description,
-  cartItems,
-  setCartItems,
+  productItems,
+  setProductItems,
 }) {
   const [quantity, setQuantity] = useState(1);
 
@@ -16,7 +16,7 @@ function Products({
     if (quantity > 1) {
       const decQuantity = quantity - 1;
       setQuantity(decQuantity);
-      setCartItems((prevItems) => {
+      setProductItems((prevItems) => {
         return prevItems.map((item) =>
           item.id === id ? { ...item, quantity: decQuantity } : item,
         );
@@ -27,7 +27,7 @@ function Products({
   function handleIncQuantity() {
     const incQuantity = quantity + 1;
     setQuantity(incQuantity);
-    setCartItems((prevItems) => {
+    setProductItems((prevItems) => {
       return prevItems.map((item) =>
         item.id === id ? { ...item, quantity: incQuantity } : item,
       );
@@ -35,12 +35,17 @@ function Products({
   }
 
   function handleAddToCart() {
-    if (!soldOut)
-      setCartItems((prevItems) => [
+    if (!soldOut && !productItems.some((item) => item.id === id)) {
+      setProductItems((prevItems) => [
         ...prevItems,
         { id, title, imageSrc, price, quantity },
       ]);
+    }
   }
+
+  const isSoldOut = soldOut;
+  const isInCart = productItems.some((item) => item.id === id);
+  const isButtonDisabled = isSoldOut || isInCart;
 
   return (
     <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
@@ -67,37 +72,27 @@ function Products({
         <div className="text-sm">Number</div>
         <div className="mb-8 flex w-[20%] items-center justify-between border py-4">
           <span
-            className={`ml-4 ${quantity === 1 ? "cursor-not-allowed" : "cursor-pointer"}`}
-            onClick={handleDecQuantity}
+            className={`ml-4 ${soldOut || quantity === 1 ? "cursor-not-allowed" : "cursor-pointer"}`}
+            onClick={!soldOut && quantity > 1 ? handleDecQuantity : undefined}
           >
             -
           </span>
           <span>{quantity}</span>
-          <span className="mr-4 cursor-pointer" onClick={handleIncQuantity}>
+          <span
+            className={`mr-4 ${soldOut ? "cursor-not-allowed" : "cursor-pointer"}`}
+            onClick={!soldOut ? handleIncQuantity : undefined}
+          >
             +
           </span>
         </div>
         <button
-          className={`mb-8 w-1/2 rounded-full border-2 border-black px-12 py-4 transition-all duration-150 ${soldOut ? "cursor-not-allowed" : "hover:shadow-inner-border cursor-pointer"} disabled:cursor-not-allowed`}
-          disabled={soldOut || cartItems.some((item) => item.id === id)}
+          className={`mb-8 w-1/2 rounded-full border-2 border-black px-12 py-4 transition-all duration-150 ${isButtonDisabled ? "cursor-not-allowed" : "cursor-pointer hover:shadow-inner-border"}`}
+          disabled={isButtonDisabled}
           onClick={handleAddToCart}
         >
-          {soldOut ? "Sold out" : "Add to cart"}
+          {soldOut ? "Sold out" : isInCart ? "In cart" : "Add to cart"}
         </button>
         <p className="mb-8">{description}</p>
-        {/* <div className="flex flex-col gap-2">
-            <div>
-              <span>Color: </span>
-              <span>Black</span>
-            </div>
-            <div>
-              <span>100% Cotton</span>
-            </div>
-            <div>
-              <span>PILATES BABES print on front</span>
-            </div>
-            <div>Adjustable metal fastener </div>
-          </div> */}
       </div>
     </div>
   );

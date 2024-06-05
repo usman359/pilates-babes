@@ -2,21 +2,21 @@ import React, { useEffect, useRef, useState } from "react";
 import ClassesCart from "../components/ClassesCart";
 
 function Classes() {
-  const [cartItems, setCartItems] = useState([]);
-  const [classCartItems, setClassCartItems] = useState([]);
+  const [classItems, setClassItems] = useState([]);
   const [showCart, setShowCart] = useState(false);
   const ref = useRef();
+  const isInitialMount = useRef(true);
 
   function handleClose(e) {
     if (ref.current && !ref.current.contains(e.target)) setShowCart(false);
   }
 
   function handleShowCart() {
-    if (cartItems.length > 0) setShowCart((open) => !open);
+    if (classItems.length > 0) setShowCart((open) => !open);
   }
 
   function handleItemDelete(id) {
-    setCartItems((prevItems) => {
+    setClassItems((prevItems) => {
       const updatedItems = prevItems.filter((item) => item.id !== id);
       if (updatedItems.length === 0) setShowCart(false);
       return updatedItems;
@@ -35,20 +35,23 @@ function Classes() {
   }, [showCart]);
 
   useEffect(() => {
-    if (cartItems.length > 0)
-      localStorage.setItem("cart", JSON.stringify(cartItems));
-  }, [cartItems]);
+    const items = JSON.parse(localStorage.getItem("cart")) || [];
+    setClassItems(items);
+  }, []);
 
   useEffect(() => {
-    const items = JSON.parse(localStorage.getItem("cart")) || [];
-    if (items.length > 0) setCartItems(items);
-  }, []);
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+    } else {
+      localStorage.setItem("cart", JSON.stringify(classItems));
+    }
+  }, [classItems]);
 
   return (
     <main className="p-16">
       <div className="relative">
         {/* Pilates babes heading */}
-        <h1 className="mb-16 text-center text-5xl uppercase">Courses</h1>
+        <h1 className="mb-16 text-center text-5xl uppercase">Classes</h1>
         <div className="cursor-pointer" onClick={handleShowCart}>
           <img
             src="shopping-bag.png"
@@ -56,9 +59,9 @@ function Classes() {
             className="absolute right-0 top-0 h-10 w-10"
           />
           <div>
-            {cartItems.length > 0 && (
+            {classItems.length > 0 && (
               <span className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full bg-black p-2 text-sm text-white">
-                {cartItems.length}
+                {classItems.length}
               </span>
             )}
           </div>
@@ -89,7 +92,7 @@ function Classes() {
 
               {/* Main */}
               <main>
-                {cartItems.map((item) => (
+                {classItems.map((item) => (
                   <div
                     className="mb-8 flex items-center justify-between"
                     key={item.id}
@@ -133,8 +136,8 @@ function Classes() {
             description="Get to know the classic Pilates method on the mat or deepen your practice.
           As always, you don't have to be a professional. I look forward to seeing you.
           You can, but don't have to, turn on your camera. ;)"
-            classCartItems={classCartItems}
-            setclassCartItems={setClassCartItems}
+            classItems={classItems}
+            setclassItems={setClassItems}
           />
           <ClassesCart
             id={2}
@@ -145,8 +148,8 @@ function Classes() {
             soldOut={false}
             description="Individual session tailored to your needs. To arrange an appointment,
           please contact me by email at hi@pilatesbabes.com."
-          classCartItems={classCartItems}
-          setclassCartItems={setClassCartItems}
+            classItems={classItems}
+            setclassItems={setClassItems}
           />
           <ClassesCart
             id={3}
@@ -156,8 +159,8 @@ function Classes() {
             price="65.00"
             soldOut={true}
             description="Finally the time has come again and the sale for the next Pilates Brunch 2024 is entering the next round."
-            classCartItems={classCartItems}
-            setclassCartItems={setClassCartItems}
+            classItems={classItems}
+            setclassItems={setClassItems}
           />
           <ClassesCart
             id={4}
@@ -167,8 +170,8 @@ function Classes() {
             price="65.00"
             soldOut={true}
             description="Finally the time has come again and the sale for the next Pilates Brunch 2024 is entering the next round."
-            classCartItems={classCartItems}
-            setclassCartItems={setClassCartItems}
+            classItems={classItems}
+            setclassItems={setClassItems}
           />
         </main>
       </div>

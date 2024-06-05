@@ -2,20 +2,21 @@ import React, { useRef, useState, useEffect } from "react";
 import Products from "../components/Products";
 
 function OfferedProducts() {
-  const [cartItems, setCartItems] = useState([]);
+  const [productItems, setProductItems] = useState([]);
   const [showCart, setShowCart] = useState(false);
   const ref = useRef();
+  const isInitialMount = useRef(true);
 
   function handleClose(e) {
     if (ref.current && !ref.current.contains(e.target)) setShowCart(false);
   }
 
   function handleShowCart() {
-    if (cartItems.length > 0) setShowCart((open) => !open);
+    if (productItems.length > 0) setShowCart((open) => !open);
   }
 
   function handleItemDelete(id) {
-    setCartItems((prevItems) => {
+    setProductItems((prevItems) => {
       const updatedItems = prevItems.filter((item) => item.id !== id);
       if (updatedItems.length === 0) setShowCart(false);
       return updatedItems;
@@ -34,14 +35,17 @@ function OfferedProducts() {
   }, [showCart]);
 
   useEffect(() => {
-    if (cartItems.length > 0)
-      localStorage.setItem("cart", JSON.stringify(cartItems));
-  }, [cartItems]);
+    const items = JSON.parse(localStorage.getItem("cart")) || [];
+    setProductItems(items);
+  }, []);
 
   useEffect(() => {
-    const items = JSON.parse(localStorage.getItem("cart")) || [];
-    if (items.length > 0) setCartItems(items);
-  }, []);
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+    } else {
+      localStorage.setItem("cart", JSON.stringify(productItems));
+    }
+  }, [productItems]);
 
   return (
     <main className="p-16">
@@ -55,9 +59,9 @@ function OfferedProducts() {
             className="absolute right-0 top-0 h-10 w-10"
           />
           <div>
-            {cartItems.length > 0 && (
+            {productItems.length > 0 && (
               <span className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full bg-black p-2 text-sm text-white">
-                {cartItems.length}
+                {productItems.length}
               </span>
             )}
           </div>
@@ -88,7 +92,7 @@ function OfferedProducts() {
 
               {/* Main */}
               <main>
-                {cartItems.map((item) => (
+                {productItems.map((item) => (
                   <div
                     className="mb-8 flex items-center justify-between"
                     key={item.id}
@@ -137,8 +141,8 @@ function OfferedProducts() {
           Contrasting crescent moon at the neck, made of own fabric
           Simple topstitching at the neckline
           Double stitching on sleeve ends, sleeve cuffs and bottom hem`}
-            cartItems={cartItems}
-            setCartItems={setCartItems}
+            productItems={productItems}
+            setProductItems={setProductItems}
           />
           <Products
             id={2}
@@ -148,8 +152,8 @@ function OfferedProducts() {
             price="1.50"
             soldOut={false}
             description="Your highly coveted Pilates Babes sticker is now finally available in the shop!"
-            cartItems={cartItems}
-            setCartItems={setCartItems}
+            productItems={productItems}
+            setProductItems={setProductItems}
           />
           <Products
             id={3}
@@ -159,8 +163,8 @@ function OfferedProducts() {
             price="39.00"
             soldOut={false}
             description="The baseball cap is the perfect accessory for sports or everyday life."
-            cartItems={cartItems}
-            setCartItems={setCartItems}
+            productItems={productItems}
+            setProductItems={setProductItems}
           />
         </main>
       </div>
