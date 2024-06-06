@@ -1,4 +1,6 @@
 .timeTableContainer {
+  width: 60%;
+  margin: 0 auto;
   text-align: center;
   margin-top: 8rem;
   margin-bottom: 8rem;
@@ -8,6 +10,7 @@
   justify-content: center;
   min-height: 100vh; /* Changed from height to min-height */
   position: relative; /* Ensure it doesn't overlap other sections */
+  overflow-x: auto; /* Allow horizontal scrolling */
 }
 
 .timeTableContainer h3 {
@@ -50,7 +53,7 @@
   margin: 0 auto;
   border-collapse: collapse;
   font-size: 1.8rem;
-  width: 60%;
+  width: 100%; /* Ensure full width on smaller screens */
 }
 
 .days {
@@ -60,12 +63,14 @@
 
 .days th {
   padding: 1.2rem;
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .exercises th,
 .exercises td {
   padding: 1.6rem;
   border: 1px solid #ccc;
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .exerciseTime {
@@ -94,7 +99,7 @@
 /* 542px => 542/16 = 33.875em */
 @media (max-width: 34em) {
   .scheduleContainer {
-    width: 90%;
+    width: 100%; /* Use full width on smaller screens */
   }
 
   .timeTableContainer {
