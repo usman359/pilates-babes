@@ -1,6 +1,7 @@
 .aboutUsContainer {
   width: 80%;
   margin: 0 auto;
+  margin-top: 8rem;
   margin-bottom: 8rem;
   display: flex;
   align-items: center;

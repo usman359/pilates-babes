@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
+  margin-top: 8rem;
   margin-bottom: 8rem;
   height: 100vh;
 }

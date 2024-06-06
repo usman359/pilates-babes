@@ -4,12 +4,10 @@
   color: #fff;
   width: 60%;
   margin: 0 auto;
-  /* transform: translateY(15%); */
-  /* margin-bottom: 8rem; */
-  /* align-content: center; */
   justify-content: center;
   height: 100vh;
-  margin-bottom: 16rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 
 .courseContent:nth-child(1) {
@@ -21,7 +19,7 @@
 }
 
 .courseContent {
-  padding: 8rem;
+  padding: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
