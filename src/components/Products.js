@@ -69,31 +69,23 @@ function Products({
           )}
         </div>
         <div className="mb-8">VAT included.</div>
-        <div className="mb-8 flex items-center justify-center">
+        <div className="mb-8 flex w-[20%] items-center justify-between border border-black py-4">
           <span
-            className={`ml-4 cursor-pointer ${
-              isButtonDisabled || quantity === 1
-                ? "pointer-events-none opacity-50"
-                : ""
-            }`}
-            onClick={handleDecQuantity}
+            className={`ml-4 ${soldOut || quantity === 1 ? "cursor-not-allowed" : "cursor-pointer"}`}
+            onClick={!soldOut && quantity > 1 ? handleDecQuantity : undefined}
           >
             -
           </span>
           <span>{quantity}</span>
           <span
-            className={`mr-4 cursor-pointer ${
-              isButtonDisabled ? "pointer-events-none opacity-50" : ""
-            }`}
-            onClick={handleIncQuantity}
+            className={`mr-4 ${soldOut ? "cursor-not-allowed" : "cursor-pointer"}`}
+            onClick={!soldOut ? handleIncQuantity : undefined}
           >
             +
           </span>
         </div>
         <button
-          className={`mb-8 w-full rounded-full border-2 border-black px-12 py-4 transition-all duration-150 md:w-auto ${
-            isButtonDisabled ? "cursor-not-allowed opacity-50" : ""
-          }`}
+          className={`mb-8 w-1/2 rounded-full border-2 border-black px-12 py-4 transition-all duration-150 ${isButtonDisabled ? "cursor-not-allowed" : "cursor-pointer hover:shadow-inner-border"} disabled:cursor-not-allowed`}
           disabled={isButtonDisabled}
           onClick={handleAddToCart}
         >
