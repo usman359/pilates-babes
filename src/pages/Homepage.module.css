@@ -67,7 +67,7 @@
 }
 
 .navBoxUl li:hover {
-  color: red;
+  color: #f3774d;
 }
 
 .flagContainer {
@@ -117,7 +117,7 @@
 
 .textBox span {
   display: block;
-  color: red;
+  color: #f3774d;
   font-size: 2.4rem;
   font-weight: bold;
   margin-bottom: 2.4rem;
