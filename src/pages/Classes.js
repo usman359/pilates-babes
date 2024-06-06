@@ -138,10 +138,10 @@ function Classes() {
               id={1}
               type="singleClass"
               imageSrc="courses/singleClass.jpeg"
-              title="Classic Pilates - Single Class 55 min online"
+              title="Body mirror by sema - Single Class 55 min online"
               price="22.00"
               soldOut={false}
-              description="Get to know the classic Pilates method on the mat or deepen your practice.
+              description="Get to know the Body mirror by sema method on the mat or deepen your practice.
           As always, you don't have to be a professional. I look forward to seeing you.
           You can, but don't have to, turn on your camera. ;)"
               classItems={classItems}
@@ -159,7 +159,7 @@ function Classes() {
               classItems={classItems}
               setclassItems={setClassItems}
             />
-            <ClassesCart
+            {/* <ClassesCart
               id={3}
               type="slot1Hamburg"
               imageSrc="courses/slot1Hamburg.jpeg"
@@ -180,7 +180,7 @@ function Classes() {
               description="Finally the time has come again and the sale for the next Pilates Brunch 2024 is entering the next round."
               classItems={classItems}
               setclassItems={setClassItems}
-            />
+            /> */}
           </main>
         </div>
       </main>
