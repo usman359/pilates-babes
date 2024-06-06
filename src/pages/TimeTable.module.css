@@ -6,7 +6,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh; /* Changed from height to min-height */
+  position: relative; /* Ensure it doesn't overlap other sections */
 }
 
 .timeTableContainer h3 {
@@ -93,10 +94,44 @@
 /* 542px => 542/16 = 33.875em */
 @media (max-width: 34em) {
   .scheduleContainer {
-    /* width: 90%; */
+    width: 90%;
   }
 
   .timeTableContainer {
-    display: none;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    min-height: auto; /* Ensure it adapts better to small screens */
+  }
+
+  .tabContainer {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .tabContainer span {
+    font-size: 1.6rem;
+  }
+
+  .timeTableContainer h1 {
+    font-size: 3.2rem;
+  }
+
+  .timeTableContainer h3 {
+    font-size: 1.4rem;
+  }
+
+  .exercises th,
+  .exercises td {
+    padding: 1rem;
+  }
+
+  .exerciseTime span {
+    padding: 0.4rem;
+  }
+
+  .exercises td strong,
+  .exercises td span {
+    padding: 0.4rem;
   }
 }
