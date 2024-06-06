@@ -51,7 +51,7 @@ function Products({
     <div className="grid sm:grid-cols-1 md:grid-cols-2 md:gap-16">
       {/* Image container */}
       <div className="col-start-1 col-end-2 row-start-1 mb-4">
-        <img src={imageSrc} alt="Pilate babes cap" className="w-[100%]" />
+        <img src={imageSrc} alt="Pilate babes cap" className="h-full w-full" />
       </div>
 
       {/* Content container */}

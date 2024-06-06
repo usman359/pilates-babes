@@ -124,6 +124,7 @@ function Classes() {
                     </div>
                   ))}
 
+                  {/* Checkout button */}
                   <button className="mb-4 block w-full rounded-full bg-black py-4 text-white">
                     Check out
                   </button>

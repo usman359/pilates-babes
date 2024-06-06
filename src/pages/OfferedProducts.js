@@ -131,11 +131,11 @@ function OfferedProducts() {
             <Products
               id={1}
               type="sweatshirt"
-              imageSrc="sweat-shirt.jpeg"
-              title="THE ORIGINAL Pilates Babes Sweatshirt"
+              imageSrc="sweat-shirt-1.webp"
+              title="THE ORIGINAL Body mirror by sema Sweatshirt"
               price="89.00"
               soldOut={true}
-              description={`THE ORIGINAL Pilates Babes Unisex Sweatshirt:
+              description={`THE ORIGINAL Body mirror by sema Sweatshirt:
           screen printing 
           Set-in sleeve
           2x2 rib knit at neckline, sleeve ends and bottom hem
@@ -144,7 +144,7 @@ function OfferedProducts() {
               productItems={productItems}
               setProductItems={setProductItems}
             />
-            <Products
+            {/* <Products
               id={2}
               type="sticker"
               imageSrc="sticker.jpeg"
@@ -154,12 +154,12 @@ function OfferedProducts() {
               description="Your highly coveted Pilates Babes sticker is now finally available in the shop!"
               productItems={productItems}
               setProductItems={setProductItems}
-            />
+            /> */}
             <Products
               id={3}
               type="cap"
               imageSrc="cap.jpeg"
-              title="Pilates Babes Baseball Cap"
+              title="Body mirror by sema Baseball Cap"
               price="39.00"
               soldOut={false}
               description="The baseball cap is the perfect accessory for sports or everyday life."

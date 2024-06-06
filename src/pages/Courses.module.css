@@ -3,11 +3,10 @@
   grid-template-columns: repeat(2, 1fr);
   color: #fff;
   width: 60%;
-  margin: 0 auto;
+  margin: 8rem auto;
   justify-content: center;
   height: 100vh;
-  margin-top: 8rem;
-  margin-bottom: 8rem;
+  gap: 2rem;
 }
 
 .courseContent:nth-child(1) {
@@ -19,10 +18,12 @@
 }
 
 .courseContent {
-  padding: 6rem;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center; /* Centering content horizontally */
+  text-align: center; /* Centering text */
 }
 
 .courseContent h1 {
@@ -30,13 +31,11 @@
   font-weight: 600;
   letter-spacing: -0.1rem;
   margin-bottom: 1.6rem;
-  text-align: end;
 }
 
 .courseContent p {
   font-size: 1.8rem;
   margin-bottom: 3.2rem;
-  text-align: end;
   line-height: 1.5;
 }
 
@@ -49,9 +48,8 @@
   cursor: pointer;
   box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.1);
   transition: all 0.4s;
-
   display: flex;
-  margin-left: auto;
+  justify-content: center;
 }
 
 .courseContent button:hover {
@@ -59,27 +57,26 @@
   color: #666;
 }
 
-.courseContent:nth-child(2) h1 {
-  text-align: start;
-}
-
-.courseContent:nth-child(2) p {
-  text-align: start;
-}
-
-.courseContent:nth-child(1) button,
-.courseContent:nth-child(2) button {
-  /* margin-left: 0%; */
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Media Queries */
-/* 935px => 935/16 = 58.44em */
 @media (max-width: 58.44em) {
   .coursesBox {
     width: 90%;
+    grid-template-columns: 1fr;
+  }
+
+  .courseContent {
+    padding: 3rem;
+  }
+
+  .courseContent h1 {
+    font-size: 3rem;
+  }
+
+  .courseContent p {
+    font-size: 1.6rem;
+  }
+
+  .courseContent button {
+    font-size: 1.8rem;
+    padding: 1.6rem 2.4rem;
   }
 }
