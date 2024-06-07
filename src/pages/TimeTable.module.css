@@ -15,7 +15,7 @@
 
 .timeTableContainer h3 {
   font-size: 1.8rem;
-  color: #f3774d;
+  color: #db2777;
   margin-bottom: 1.6rem;
 }
 
@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: center;
   gap: 1.6rem;
-  color: red;
+  color: #db2777;
   cursor: pointer;
   margin-bottom: 1.6rem;
 }
@@ -41,11 +41,11 @@
 }
 
 .tabContainer span:hover {
-  color: #f3774d;
+  color: #db2777;
 }
 
 .bgColor {
-  background-color: #f3774d;
+  background-color: #db2777;
   color: #fff;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .days {
-  background-color: #f3774d;
+  background-color: #db2777;
   color: #fff;
 }
 
@@ -75,7 +75,7 @@
 
 .exerciseTime {
   color: #fff;
-  background-color: #f3774d;
+  background-color: #db2777;
 }
 
 .exerciseTime span {

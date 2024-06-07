@@ -34,7 +34,7 @@
 
 .accomplishment .icon {
   font-size: 6.2rem;
-  color: #f3774d;
+  color: #db2777;
 }
 
 .accomplishment div h3 {
@@ -50,8 +50,8 @@
 }
 
 .aboutUsContainer div button {
-  border: 2px solid #f3774d;
-  color: #f3774d;
+  border: 2px solid #db2777;
+  color: #db2777;
   background: none;
   font-size: 1.4rem;
   padding: 1.2rem 2.4rem;
@@ -62,7 +62,7 @@
 }
 
 .aboutUsContainer div button:hover {
-  background-color: #f3774d;
+  background-color: #db2777;
   color: #fff;
 }
 
