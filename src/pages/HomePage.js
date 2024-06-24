@@ -14,7 +14,7 @@ import Nav2 from "../components/Nav2";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
 
-const images = ["1-min.png", "2-min.jpg", "3-min.jpg"];
+const images = ["hero.jpeg", "2-min.jpg", "3-min.jpg"];
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -112,7 +112,6 @@ export default function HomePage() {
       <Features />
       <Benefits />
       <TimeTable />
-      {/* <Experts /> */}
       <Testimonials />
       <Footer />
     </div>

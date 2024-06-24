@@ -10,7 +10,7 @@
 }
 
 .courseContent:nth-child(1) {
-  background-color: #db2777;
+  background-color: #fb7185;
 }
 
 .courseContent:nth-child(2) {
@@ -53,7 +53,7 @@
 }
 
 .courseContent button:hover {
-  background-color: #fff;
+  background-color: #fecdd3;
   color: #666;
 }
 

@@ -1,10 +1,9 @@
 .featuresContainer {
-  /* height: 35rem; */
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
-  margin-top: 8rem;
-  margin-bottom: 8rem;
   height: 100vh;
 }
 
@@ -13,7 +12,7 @@
 }
 
 .featuresContainer .feature2 {
-  background-color: #db2777;
+  background-color: #fb7185;
 }
 
 .featuresContainer .feature3 {
@@ -22,7 +21,7 @@
 
 .featuresContainer div .featureicon {
   font-size: 5.2rem;
-  color: #db2777;
+  color: #fecdd3;
 }
 
 .feature1,

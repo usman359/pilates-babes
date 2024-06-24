@@ -34,7 +34,7 @@ function Testimonials() {
   useEffect(function () {
     const intervalId = setInterval(function () {
       setCurrentClient((prevClient) =>
-        prevClient >= clientInformation.length - 1 ? 0 : prevClient + 1
+        prevClient >= clientInformation.length - 1 ? 0 : prevClient + 1,
       );
     }, 3000);
 

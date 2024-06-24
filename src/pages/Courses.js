@@ -10,7 +10,7 @@ export default function Courses() {
       <div className={styles.courseContent}>
         <h1>Single Class</h1>
         <p>
-          Get to know the Classic Pilates method on the mat or deepen your
+          Get to know the Body mirror by sema method on the mat or deepen your
           practice. As always, you don't have to be a professional. I look
           forward to you. You can but don't have to turn on your camera.
         </p>

@@ -48,10 +48,14 @@ function ClassesCart({
   const isButtonDisabled = isSoldOut || isInCart;
 
   return (
-    <div className="grid gap-8 bg-stone-200 sm:grid-cols-1 md:grid-cols-2">
+    <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
       {/* Image container */}
       <div className="flex items-center justify-center p-8">
-        <img src={imageSrc} alt="Pilate babes cap" className="block w-[80%]" />
+        <img
+          src={imageSrc}
+          alt="Pilate babes single class"
+          className="block h-full"
+        />
       </div>
 
       {/* Content container */}
@@ -93,6 +97,126 @@ function ClassesCart({
           {soldOut ? "Sold out" : isInCart ? "In cart" : "Add to cart"}
         </button>
         <p className="mb-8">{description}</p>
+        {id === 1 && (
+          <>
+            <p className="mb-4">
+              Discover the revolution of Pilates: Your transformation starts
+              here!
+            </p>
+            <p className="mb-4">
+              My Pilates classes go beyond classic Pilates. I integrate modern
+              elements from functional training, strength training, and
+              endurance training to offer you a unique and effective workout.
+            </p>
+            <h1 className="mb-2">Why my classes are special:</h1>
+            <ul>
+              <li>
+                <strong>Innovative Exercises</strong>
+                <p>
+                  I combine traditional Pilates techniques with innovative
+                  approaches to strengthen and shape your body holistically.
+                </p>
+              </li>
+              <li>
+                <strong>Functional Training</strong>
+                <p>
+                  Elements from functional training enhance your mobility and
+                  everyday functionality.
+                </p>
+              </li>
+              <li>
+                <strong>Strength and Endurance</strong>
+                <p>
+                  My workouts include powerful and endurance-boosting exercises
+                  that push you to your limits and beyond.
+                </p>
+              </li>
+              <li>
+                <strong>Playful Rules</strong>
+                <p>
+                  Some exercises are designed with playful elements and rules to
+                  bring variety and fun to your training.
+                </p>
+              </li>
+              <p className="mt-8">
+                Experience how the fusion of classic Pilates and modern training
+                methods can revolutionize your fitness. There is so much to
+                discover, and I am confident that you will be thrilled. Come out
+                of curiosity and stay out of full conviction.
+              </p>
+              <p className="mt-4">
+                Put yourself in my hands and be excited about the change. The
+                only thing I expect from you is discipline and a willingness to
+                change.
+              </p>
+              <p>
+                Don't wait any longer - book your course now and start your
+                transformation! Try my method and be surprised by the results.
+                Your new fitness journey awaits you!
+              </p>
+            </ul>
+          </>
+        )}
+        {id === 2 && (
+          <>
+            <p className="mb-4">
+              Discover the revolution of Pilates: Your transformation starts
+              here!
+            </p>
+            <p className="mb-4">
+              My Pilates classes go beyond classic Pilates. I integrate modern
+              elements from functional training, strength training, and
+              endurance training to offer you a unique and effective workout.
+            </p>
+            <h1 className="mb-2">Why my classes are special:</h1>
+            <ul>
+              <li>
+                <strong>Innovative Exercises</strong>
+                <p>
+                  I combine traditional Pilates techniques with innovative
+                  approaches to strengthen and shape your body holistically.
+                </p>
+              </li>
+              <li>
+                <strong>Functional Training</strong>
+                <p>
+                  Elements from functional training enhance your mobility and
+                  everyday functionality.
+                </p>
+              </li>
+              <li>
+                <strong>Strength and Endurance</strong>
+                <p>
+                  My workouts include powerful and endurance-boosting exercises
+                  that push you to your limits and beyond.
+                </p>
+              </li>
+              <li>
+                <strong>Playful Rules</strong>
+                <p>
+                  Some exercises are designed with playful elements and rules to
+                  bring variety and fun to your training.
+                </p>
+              </li>
+              <p className="mt-8">
+                Experience how the fusion of classic Pilates and modern training
+                methods can revolutionize your fitness. There is so much to
+                discover, and I am confident that you will be thrilled. Come out
+                of curiosity and stay out of full conviction.
+              </p>
+              <p className="mt-4">
+                Put yourself in my hands and be excited about the change. The
+                only thing I expect from you is discipline and a willingness to
+                change.
+              </p>
+              <p>
+                Don't wait any longer - book your course now and start your
+                transformation! Try my method and be surprised by the results.
+                Your new fitness journey awaits you!
+              </p>
+            </ul>
+          </>
+        )}
       </div>
     </div>
   );

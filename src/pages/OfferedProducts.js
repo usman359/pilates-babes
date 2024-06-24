@@ -50,7 +50,7 @@ function OfferedProducts() {
 
   return (
     <>
-      <main className="bg-[#e7e5e4] p-16">
+      <main className="p-16">
         <div className="relative">
           {/* Pilates babes heading */}
           <h1 className="mb-16 text-center text-5xl uppercase">Our Products</h1>
