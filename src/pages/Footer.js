@@ -36,7 +36,7 @@ function Footer() {
               <ion-icon name="logo-youtube"></ion-icon>
             </a>
             <a
-              href="https://www.instagram.com/thepilatesbabe_/"
+              href="https://www.instagram.com/bodymirror_bysema?igsh=cmw2ZXIwamllY2Fj&utm_source=qr"
               target="_blank"
               rel="noreferrer"
               className={styles.logos}
