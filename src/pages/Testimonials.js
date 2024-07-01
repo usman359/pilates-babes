@@ -1,44 +1,17 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Testimonials.module.css";
-
-const clientInformation = [
-  {
-    picture: "ui-face1.jpg",
-    name: "Michaela",
-    description:
-      "It's an indescribable feeling to exercise with Elvira and the other 'Pilates Babes' early in the morning. Elvira's Pilates style is wonderfully dynamic and energetic.",
-  },
-  {
-    picture: "ui-face2.jpg",
-    name: "Verena",
-    description:
-      "You can just tell that she loves what she does and that every 'Pilates babe' is important to her.",
-  },
-  {
-    picture: "ui-face3.jpg",
-    name: "Melanie",
-    description:
-      "Elvi's positive and motivating nature gets the best out of the participants: she pushes and cheers you on, so that at the end you are exhausted, but at the same time you have recharged your strength and energy.",
-  },
-  {
-    picture: "ui-face4.jpg",
-    name: "Heike",
-    description:
-      "I felt comfortable with Elvira and the community right from the start. I never had the feeling that you were being compared or judged, but that everyone was doing the best for themselves at their own pace.",
-  },
-];
+import { userReviews } from "../data/userReviews";
 
 function Testimonials() {
   const [currentClient, setCurrentClient] = useState(0);
 
-  useEffect(function () {
-    const intervalId = setInterval(function () {
+  useEffect(() => {
+    const intervalId = setInterval(() => {
       setCurrentClient((prevClient) =>
-        prevClient >= clientInformation.length - 1 ? 0 : prevClient + 1,
+        prevClient >= userReviews.length - 1 ? 0 : prevClient + 1,
       );
     }, 3000);
 
-    return function () {
+    return () => {
       clearInterval(intervalId);
     };
   }, []);
@@ -48,43 +21,48 @@ function Testimonials() {
   }
 
   return (
-    <div className={styles.testimonialContainer}>
-      <div className={styles.testimonialContentContainer}>
-        <div className={styles.content1Box}>
-          <div className={styles.photoAndTextBox}>
-            <div className={styles.imageBox}>
+    <div className="my-32 ml-auto h-[50rem] w-4/5 bg-[#a08679]">
+      <div className="flex gap-8">
+        <div className="flex w-2/5 flex-col justify-center p-8">
+          <div className="mb-6 flex items-center gap-4">
+            <div className="h-6 w-6">
               <img
-                src={`${clientInformation[currentClient].picture}`}
-                alt="man"
-                className={styles.image}
+                src={userReviews[currentClient].picture}
+                alt="client"
+                className="h-full w-full"
               />
             </div>
-            <div className={styles.textBox}>
-              <h3>{`${clientInformation[currentClient].name}`}</h3>
+            <div className="text-lg text-white">
+              <h3 className="mb-2 text-xl text-[#fecdd3]">
+                {userReviews[currentClient].name}
+              </h3>
               <span>Profession</span>
             </div>
           </div>
-          <p className={styles.paragraph}>
-            {`${clientInformation[currentClient].description}`}
+          <p className="mb-6 border border-white bg-[#a08679] p-4 text-lg leading-6 text-white">
+            {userReviews[currentClient].description}
           </p>
-          <div className={styles.sliderBox}>
-            {clientInformation.map((_, index) => (
+          <div className="relative flex w-full items-center justify-center gap-1.5">
+            {userReviews.map((_, index) => (
               <hr
                 key={index}
-                className={`${styles.slider} ${
-                  currentClient === index && styles.active
+                className={`relative z-10 mt-2 h-1 w-9 cursor-pointer rounded border-none bg-white ${
+                  currentClient === index ? "bg-stone-500" : ""
                 }`}
                 onClick={() => handleSliderClick(index)}
               />
             ))}
           </div>
         </div>
-        <div className={styles.content2Box}>
-          {/* <img src="hero-1.jpg" alt="Lady" className={styles.image2} /> */}
-          <div className={styles.textBox2}>
-            <h3>Testimonial</h3>
-            <span>What Our Clients Say?</span>
-            <p>{`${clientInformation[currentClient].description}`}</p>
+        <div className="flex h-[50rem] w-3/5 flex-col justify-center bg-gradient-to-r from-black/10 to-gray-400/50 p-8">
+          <div className="w-3/5">
+            <h3 className="mb-2 text-xl text-[#fecdd3]">Testimonial</h3>
+            <span className="mb-3 block text-4xl font-bold text-white">
+              What Our Clients Say?
+            </span>
+            <p className="mb-2 h-[15rem] text-lg leading-6 text-white">
+              {userReviews[currentClient].description}
+            </p>
           </div>
         </div>
       </div>

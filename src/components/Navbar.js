@@ -1,16 +1,18 @@
 import React from "react";
-import styles from "./Navbar.module.css";
 import { handleScrollTo } from "../helpers/scroll";
 
-export default function Navbar() {
+export default function Navbar({ navItems }) {
   return (
-    <ul className={styles.navbar}>
-      <li className={styles.active}>Home</li>
-      <li onClick={() => handleScrollTo("courses")}>Courses</li>
-      <li onClick={() => handleScrollTo("aboutUs")}>About Us</li>
-      <li onClick={() => handleScrollTo("features")}>Features</li>
-      <li onClick={() => handleScrollTo("calendar")}>Calendar</li>
-      <li onClick={() => handleScrollTo("bmi")}>BMI</li>
+    <ul className="flex items-center gap-12 text-3xl text-white">
+      {navItems.map((item) => (
+        <li
+          key={item}
+          className={`${item === "Home" ? "text-red-600" : ""} cursor-pointer transition-all hover:text-red-600`}
+          onClick={() => handleScrollTo(item.toLowerCase())}
+        >
+          {item}
+        </li>
+      ))}
     </ul>
   );
 }
