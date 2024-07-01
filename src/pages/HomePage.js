@@ -60,7 +60,7 @@ export default function HomePage() {
 
       {/* Header with navigation */}
       <div className="absolute left-0 top-0 w-full">
-        <div className="hidden bg-gray-700 bg-opacity-80 px-4 py-2 md:flex md:justify-between">
+        <div className="hidden bg-gray-700 bg-opacity-80 px-4 py-2 md:flex md:items-center md:justify-between">
           <Navbar navItems={navItemsLeft} />
           <Logo className="absolute left-1/2 top-0 h-40 -translate-x-1/2 transform cursor-pointer" />
           <Navbar navItems={navItemsRight} />
@@ -91,9 +91,9 @@ export default function HomePage() {
               </li>
               <li
                 className="cursor-pointer transition-colors duration-300 hover:text-pink-500"
-                onClick={() => handleScrollTo("aboutUs")}
+                onClick={() => handleScrollTo("about")}
               >
-                About Us
+                About
               </li>
               <li
                 className="cursor-pointer transition-colors duration-300 hover:text-pink-500"
