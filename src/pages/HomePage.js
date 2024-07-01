@@ -119,7 +119,7 @@ export default function HomePage() {
       </div>
 
       {/* Text box */}
-      <div className="absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 transform text-center text-white md:w-auto">
+      {/* <div className="absolute left-1/2 top-1/2 w-full text-white">
         <span className="mb-10 block text-4xl font-bold text-pink-500">
           Gym & Fitness Center
         </span>
@@ -129,7 +129,7 @@ export default function HomePage() {
         <button className="duration-400 cursor-pointer border-2 border-white bg-transparent px-12 py-3 text-lg text-white shadow-lg transition-all hover:bg-pink-500 hover:text-white">
           Book your class
         </button>
-      </div>
+      </div> */}
 
       {/* Slide navigation arrows */}
       <div
