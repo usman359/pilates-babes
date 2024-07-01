@@ -67,21 +67,21 @@ export default function HomePage() {
         </div>
 
         {/* Hamburger menu and icon for small screens */}
-        <div className="relative flex items-center bg-gray-700 bg-opacity-80 p-4 md:hidden">
+        <div className="relative flex h-32 items-center justify-center bg-gray-700 bg-opacity-60 p-4 md:hidden">
           <img
             src="logo.png"
             alt="Logo"
-            className="absolute left-1/2 h-16 cursor-pointer"
+            className="absolute left-1/2 top-0 w-36 -translate-x-1/2 transform cursor-pointer"
           />
           <RxHamburgerMenu
-            className="ml-auto cursor-pointer text-4xl text-white"
+            className="ml-auto cursor-pointer text-7xl text-white"
             onClick={handleToggleNavBox}
           />
         </div>
 
         {/* Navigation box */}
         {navBox && (
-          <div className="absolute left-0 top-0 w-full bg-gray-700 bg-opacity-80 p-4 text-white">
+          <div className="absolute left-0 w-full bg-gray-700 bg-opacity-60 p-4 text-white">
             <ul className="flex list-none flex-col gap-14 px-8 py-5">
               <li
                 className="cursor-pointer transition-colors duration-300 hover:text-pink-500"
