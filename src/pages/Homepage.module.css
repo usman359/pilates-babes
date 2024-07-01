@@ -22,6 +22,9 @@
 .logo {
   height: 10rem;
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 50%;
 }
 
 .hamburger {
@@ -30,6 +33,7 @@
   align-items: center;
   justify-content: space-between;
   color: #fff;
+  position: relative;
 }
 
 .hamburgerIcon {

@@ -9,19 +9,21 @@
 }
 
 .image {
-  height: 60vh;
+  width: 20%;
 }
 
 .textBox h1 {
   margin-top: 6rem;
   font-size: 4.4rem;
   margin-bottom: 2.4rem;
+  text-align: center;
 }
 
 .textBox p {
   font-size: 1.8rem;
   margin-bottom: 2.4rem;
   line-height: 1.5;
+  text-align: center;
 }
 
 .accomplishment {
@@ -74,9 +76,6 @@
 
 /* 542px => 542/16 = 33.875em */
 @media (max-width: 34em) {
-  .image {
-    height: 35vh;
-  }
   .aboutUsContainer {
     height: 50vh;
   }
