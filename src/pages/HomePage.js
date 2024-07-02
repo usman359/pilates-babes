@@ -12,8 +12,8 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
-// const images = ["hero.jpeg", "2-min.jpg", "3-min.jpg"];
-const images = ["hero.jpeg"];
+const images = ["hero.jpeg", "2-min.jpg", "3-min.jpg"];
+// const images = ["hero.jpeg"];
 
 const navItemsLeft = ["Home", "Courses", "About"];
 const navItemsRight = ["Benefits", "Calendar", "Products"];
@@ -51,7 +51,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="relative" id="home">
+    <div className="relative h-screen" id="home">
       <img
         src={image}
         alt="Lady telling about fitness"
@@ -119,21 +119,24 @@ export default function HomePage() {
       </div>
 
       {/* Text box */}
-      {/* <div className="absolute left-1/2 top-1/2 w-full text-white">
+      <div className="absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 text-center text-white">
         <span className="mb-10 block text-4xl font-bold text-pink-500">
           Gym & Fitness Center
         </span>
         <h1 className="mb-16 text-6xl font-semibold tracking-tighter">
           Get Body in Shape
         </h1>
-        <button className="duration-400 cursor-pointer border-2 border-white bg-transparent px-12 py-3 text-lg text-white shadow-lg transition-all hover:bg-pink-500 hover:text-white">
+        <button
+          className="duration-400 cursor-pointer border-2 border-white bg-transparent px-12 py-3 text-xl text-white shadow-lg transition-all hover:bg-pink-500 hover:text-white"
+          onClick={() => navigate("courses")}
+        >
           Book your class
         </button>
-      </div> */}
+      </div>
 
       {/* Slide navigation arrows */}
       <div
-        className="absolute left-6 top-1/2 -translate-y-1/2 transform cursor-pointer text-4xl text-white hover:text-gray-400"
+        className="absolute left-6 top-1/2 -translate-y-1/2 cursor-pointer text-4xl text-white hover:text-gray-400"
         onClick={slideToPreviousImage}
       >
         <ion-icon name="chevron-back-outline"></ion-icon>
