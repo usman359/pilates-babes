@@ -84,31 +84,31 @@ export default function HomePage() {
           <div className="absolute left-0 w-full bg-gray-700 bg-opacity-60 p-4 text-white">
             <ul className="flex list-none flex-col gap-14 px-8 py-5">
               <li
-                className="cursor-pointer transition-colors duration-300 hover:text-pink-500"
+                className="cursor-pointer transition-colors duration-300 hover:text-pink-300"
                 onClick={() => handleScrollTo("home")}
               >
                 Home
               </li>
               <li
-                className="cursor-pointer transition-colors duration-300 hover:text-pink-500"
+                className="cursor-pointer transition-colors duration-300 hover:text-pink-300"
                 onClick={() => handleScrollTo("about")}
               >
                 About
               </li>
               <li
-                className="cursor-pointer transition-colors duration-300 hover:text-pink-500"
+                className="cursor-pointer transition-colors duration-300 hover:text-pink-300"
                 onClick={() => handleScrollTo("features")}
               >
                 Features
               </li>
               <li
-                className="cursor-pointer transition-colors duration-300 hover:text-pink-500"
+                className="cursor-pointer transition-colors duration-300 hover:text-pink-300"
                 onClick={() => navigate("products")}
               >
                 Products
               </li>
               <li
-                className="cursor-pointer transition-colors duration-300 hover:text-pink-500"
+                className="cursor-pointer transition-colors duration-300 hover:text-pink-300"
                 onClick={() => navigate("classes")}
               >
                 Classes

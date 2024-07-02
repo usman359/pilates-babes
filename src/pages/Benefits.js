@@ -6,7 +6,7 @@ function Benefits() {
       className="mx-auto flex h-screen w-full flex-col items-center justify-center px-6 py-32 text-white"
       id="benefits"
     >
-      <h3 className="mb-6 text-center text-4xl text-pink-300">
+      <h3 className="mb-6 text-center text-4xl text-[#a08679]">
         Why Choose Us?
       </h3>
       <h1 className="mb-16 text-center text-5xl font-bold text-black lg:text-7xl">

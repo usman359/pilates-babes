@@ -33,13 +33,13 @@ function Testimonials() {
               />
             </div>
             <div className="text-lg text-white">
-              <h3 className="mb-2 text-xl text-[#fecdd3]">
+              <h3 className="mb-2 text-xl text-black">
                 {userReviews[currentClient].name}
               </h3>
               <span>Profession</span>
             </div>
           </div>
-          <p className="mb-6 border border-white bg-[#a08679] p-4 text-lg leading-6 text-white">
+          <p className="mb-6 border border-white bg-[#a08679] p-4 text-xl leading-6 text-white">
             {userReviews[currentClient].description}
           </p>
           <div className="relative flex w-full items-center justify-center gap-1.5">
@@ -56,11 +56,11 @@ function Testimonials() {
         </div>
         <div className="flex h-[50rem] w-3/5 flex-col justify-center bg-gradient-to-r from-black/10 to-gray-400/50 p-8">
           <div className="w-3/5">
-            <h3 className="mb-2 text-xl text-[#fecdd3]">Testimonial</h3>
+            <h3 className="mb-2 text-xl text-black">Testimonial</h3>
             <span className="mb-3 block text-4xl font-bold text-white">
               What Our Clients Say?
             </span>
-            <p className="mb-2 h-[15rem] text-lg leading-6 text-white">
+            <p className="mb-2 h-[15rem] text-xl leading-6 text-white">
               {userReviews[currentClient].description}
             </p>
           </div>
